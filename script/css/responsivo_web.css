@@ -1,0 +1,538 @@
+/*
+medias querys 
+breack poinsts
+1024 y 1200	pc's
+
+600 y 768	tabletas
+
+320 y 480	smartphones
+*/
+/*escritorio*/
+
+@media screen and (min-width:1201px){
+
+}
+@media (min-width:1025px) and (max-width:1200px){
+
+}
+@media (min-width:769px) and (max-width:1024px){
+
+}
+/*600 y 768	tabletas*/
+@media screen and (max-width:768px){
+.bx-controls-direction {
+	    display: none;
+	}
+	#footer .label-option {
+	    font-size: 0.8em;
+	    text-align: left;
+	}
+	#formulario_encuesta {
+	    border: none !important;
+	    border-radius: 0px !important;
+	    padding: 24px !important;
+	}
+	.social-icons li a {
+	    width: 43px;
+	    height: 43px;
+    }
+    .soap-icon-facebook:before, .soap-icon-twitter:before, .soap-icon-googleplus:before, .soap-icon-youtube:before, .soap-icon-instagram:before, .soap-icon-pinterest:before {
+	    padding: 11px !important;
+	}
+	#footer a.btn.btn-info-nosotros {
+	    float: inherit;
+	}
+	h1 {
+	    font-size: 1.8em;
+	}
+	h2 {
+	    font-size: 1.5em;
+	}
+	h3 {
+	    font-size: 1em;
+	}
+	#destinos-inicio {
+	    height: auto !important;
+	    max-height: 100% !important;
+	}
+	#servicios-a-bordo {
+	    padding: 20px;
+	}
+	.icon-servicios {
+	    margin-top: 20px;
+	    padding: 0px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: auto !important;
+	}
+	#promocion-video iframe {
+	    height: auto !important;
+	}
+	.container {
+	    width: 100% !important;
+	}
+	.icon-servicios h2 {
+	    font-size: 0.9rem !important;
+	}
+	.icon-map:before{
+		display: none !important;
+	}
+	.image-box.style2 figure {
+	    width: auto;
+	}
+	#inicio-horario .btn-seleccionar {
+	    padding: 0px 20px;
+	    margin: 0 auto;
+	    display: block;
+	}
+	.btn.btn-default.btn-formularios {
+	    padding: 0px 10px;
+	    border-radius: 10px;
+	}
+	.search-tab-content h4.title {
+	    font-size: 1rem;
+	}
+	.header-fondo-culiacan, .header-fondo-culiacan.mazatlan, .header-fondo-culiacan.rosario, .header-fondo-culiacan.escuinapa {
+	    height: auto  !important;
+	    display:none;
+	}
+	.modal-ubicaciones button.btn.btn-default {
+	    display: none !important;
+	}
+	#paqueteria-envio .texto-paq {
+	    padding: 0px 10px;
+	}
+	.contacto-paqueteria .icon-box.style3 .description {
+	    font-size: 1.4rem;
+	}
+	#post-slideshow1 {
+	    height: auto !important;
+	}
+	.seccion-links h2.subtitle-servicios {
+	    font-size: 1.5rem;
+	}
+	.contenido-link a.btn-link {
+    	width: 100%;
+	}
+	#banner-youtube2 {
+	    margin: 45px 0px;
+	}
+	#info-sucursales {
+	    height: 245px !important;
+	}
+	.travelo-box {
+	    position: inherit !important;
+	}
+	.icon-box.style5 > i {
+	    display: none !important;
+	}
+	.icon-box.style5 {
+	    height: 220px;
+	    padding: 10px;
+    }
+    #atencion-quejas h5 {
+	    font-size: 0.9rem;
+	}
+	.icon-box.style5 .description {
+	    padding: 0px;
+	}
+	#general-servicios-a-bordo .seccion-servicios img,
+	#descripcion-servicios-a-bordo img, #galerias-servicios img {
+	    width: 100% !important;
+	}
+	#menu ul li a {
+	    font-size: 1.1em !important;
+	}
+	#menu i {
+    	font-size: 1.3rem !important;
+    }
+    #texto-descripcion-servicios h2,#seguridad #texto-descripcion-servicios h2, #galerias-servicios h2  {
+    	font-size: 1.6em !important;
+    }
+    #descripcion-servicios-a-bordo, #comodidad {
+    	background-size: cover !important;
+    }
+    #texto-descripcion-servicios p {
+	    font-size: 1.3em !important;
+	    padding: 10px !important;
+	}
+	#texto-descripcion-servicios,
+	#general-servicios-a-bordo .seccion-servicios {
+	    padding: 10px 0px 10px 0px !important;
+	}
+	.oculta-slider-txt-transporte {
+	    display: none;
+	}
+	.promo-text {
+	    margin-top: -15% !important;
+	}
+	.wpb_wrapper .box figure:before{
+	    background: transparent;
+	}
+	.interiores-exteriores .gal-img {
+	    height: auto !important;
+	}
+	#fancybox-wrap {
+	    display: none !important;
+	}
+	#contenido-afiliarse {
+	    background: none !important;
+	}
+	#contenido-afiliarse .registrarse{
+	    margin: 0 auto;
+	    display: block;
+	    text-align: center;
+	    font-size: 1.4rem;
+	    border-radius: 10px !important;
+	}
+	#contenido-afiliarse {
+    	padding: 50px 9px 50px 9px  !important;
+	    margin: 0 auto;
+	    display: block;
+	}
+}
+@media (min-width:481px) and (max-width:600px){
+	.bx-controls-direction {
+	    display: none;
+	}
+	#footer .label-option {
+	    font-size: 0.8em;
+	    text-align: left;
+	}
+	#formulario_encuesta {
+	    border: none !important;
+	    border-radius: 0px !important;
+	    padding: 24px !important;
+	}
+	.social-icons li a {
+	    width: 43px;
+	    height: 43px;
+    }
+    .soap-icon-facebook:before, .soap-icon-twitter:before, .soap-icon-googleplus:before, .soap-icon-youtube:before, .soap-icon-instagram:before, .soap-icon-pinterest:before {
+	    padding: 11px !important;
+	}
+	#footer a.btn.btn-info-nosotros {
+	    float: inherit;
+	}
+	h1 {
+	    font-size: 1.8em;
+	}
+	h2 {
+	    font-size: 1.5em;
+	}
+	h3 {
+	    font-size: 1em;
+	}
+	#destinos-inicio {
+	    height: auto !important;
+	    max-height: 100% !important;
+	}
+	#servicios-a-bordo {
+	    padding: 20px;
+	}
+	.icon-servicios {
+	    margin-top: 20px;
+	    padding: 0px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: auto !important;
+	}
+	#promocion-video iframe {
+	    height: auto !important;
+	}
+	.container {
+	    width: 100% !important;
+	}
+	.icon-servicios h2 {
+	    font-size: 0.9rem !important;
+	}
+	.icon-map:before{
+		display: none !important;
+	}
+	.image-box.style2 figure {
+	    width: auto;
+	}
+	#inicio-horario .btn-seleccionar {
+	    padding: 0px 20px;
+	    margin: 0 auto;
+	    display: block;
+	}
+	.btn.btn-default.btn-formularios {
+	    padding: 0px 10px;
+	    border-radius: 10px;
+	}
+	.search-tab-content h4.title {
+	    font-size: 1rem;
+	}
+	.header-fondo-culiacan, .header-fondo-culiacan.mazatlan, .header-fondo-culiacan.rosario, .header-fondo-culiacan.escuinapa {
+	    height: auto  !important;
+	    display:none;
+	}
+	.modal-ubicaciones button.btn.btn-default {
+	    display: none !important;
+	}
+	#paqueteria-envio .texto-paq {
+	    padding: 0px 10px;
+	}
+	.contacto-paqueteria .icon-box.style3 .description {
+	    font-size: 1.4rem;
+	}
+	#post-slideshow1 {
+	    height: auto !important;
+	}
+	.seccion-links h2.subtitle-servicios {
+	    font-size: 1.5rem;
+	}
+	.contenido-link a.btn-link {
+    	width: 100%;
+	}
+	#banner-youtube2 {
+	    margin: 45px 0px;
+	}
+	#info-sucursales {
+	    height: 245px !important;
+	}
+	.travelo-box {
+	    position: inherit !important;
+	}
+	.icon-box.style5 > i {
+	    display: none !important;
+	}
+	.icon-box.style5 {
+	    height: 220px;
+	    padding: 10px;
+    }
+    #atencion-quejas h5 {
+	    font-size: 0.9rem;
+	}
+	.icon-box.style5 .description {
+	    padding: 0px;
+	}
+	#general-servicios-a-bordo .seccion-servicios img,
+	#descripcion-servicios-a-bordo img, #galerias-servicios img {
+	    width: 100% !important;
+	}
+	#menu ul li a {
+	    font-size: 1.1em !important;
+	}
+	#menu i {
+    	font-size: 1.3rem !important;
+    }
+    #texto-descripcion-servicios h2,#seguridad #texto-descripcion-servicios h2, #galerias-servicios h2  {
+    	font-size: 1.6em !important;
+    }
+    #descripcion-servicios-a-bordo, #comodidad {
+    	background-size: cover !important;
+    }
+    #texto-descripcion-servicios p {
+	    font-size: 1.3em !important;
+	    padding: 10px !important;
+	}
+	#texto-descripcion-servicios,
+	#general-servicios-a-bordo .seccion-servicios {
+	    padding: 10px 0px 10px 0px !important;
+	}
+	.oculta-slider-txt-transporte {
+	    display: none;
+	}
+	.promo-text {
+	    margin-top: -15% !important;
+	}
+	.wpb_wrapper .box figure:before{
+	    background: transparent;
+	}
+	.interiores-exteriores .gal-img {
+	    height: auto !important;
+	}
+	#fancybox-wrap {
+	    display: none !important;
+	}
+	#contenido-afiliarse {
+	    background: none !important;
+	}
+	#contenido-afiliarse .registrarse{
+	    margin: 0 auto;
+	    display: block;
+	    text-align: center;
+	    font-size: 1.4rem;
+	    border-radius: 10px !important;
+	}
+	#contenido-afiliarse {
+    	padding: 50px 9px 50px 9px  !important;
+	    margin: 0 auto;
+	    display: block;
+	}
+}
+/*320 y 480	smartphones*/
+@media (max-width:480px){
+	.bx-controls-direction {
+	    display: none;
+	}
+	#footer .label-option {
+	    font-size: 0.8em;
+	    text-align: left;
+	}
+	#formulario_encuesta {
+	    border: none !important;
+	    border-radius: 0px !important;
+	    padding: 24px !important;
+	}
+	.social-icons li a {
+	    width: 43px;
+	    height: 43px;
+    }
+    .soap-icon-facebook:before, .soap-icon-twitter:before, .soap-icon-googleplus:before, .soap-icon-youtube:before, .soap-icon-instagram:before, .soap-icon-pinterest:before {
+	    padding: 11px !important;
+	}
+	#footer a.btn.btn-info-nosotros {
+	    float: inherit;
+	}
+	h1 {
+	    font-size: 1.8em;
+	}
+	h2 {
+	    font-size: 1.5em;
+	}
+	h3 {
+	    font-size: 1em;
+	}
+	#destinos-inicio {
+	    height: auto !important;
+	    max-height: 100% !important;
+	}
+	#servicios-a-bordo {
+	    padding: 20px;
+	}
+	.icon-servicios {
+	    margin-top: 20px;
+	    padding: 0px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: auto !important;
+	}
+	#promocion-video iframe {
+	    height: auto !important;
+	}
+	.container {
+	    width: 100% !important;
+	}
+	.icon-servicios h2 {
+	    font-size: 0.9rem !important;
+	}
+	.icon-map:before{
+		display: none !important;
+	}
+	.image-box.style2 figure {
+	    width: auto;
+	}
+	#inicio-horario .btn-seleccionar {
+	    padding: 0px 20px;
+	    margin: 0 auto;
+	    display: block;
+	}
+	.btn.btn-default.btn-formularios {
+	    padding: 0px 10px;
+	    border-radius: 10px;
+	}
+	.search-tab-content h4.title {
+	    font-size: 1rem;
+	}
+	.header-fondo-culiacan, .header-fondo-culiacan.mazatlan, .header-fondo-culiacan.rosario, .header-fondo-culiacan.escuinapa {
+	    height: auto  !important;
+	    display:none;
+	}
+	.modal-ubicaciones button.btn.btn-default {
+	    display: none !important;
+	}
+	#paqueteria-envio .texto-paq {
+	    padding: 0px 10px;
+	}
+	.contacto-paqueteria .icon-box.style3 .description {
+	    font-size: 1.4rem;
+	}
+	#post-slideshow1 {
+	    height: auto !important;
+	}
+	.seccion-links h2.subtitle-servicios {
+	    font-size: 1.5rem;
+	}
+	.contenido-link a.btn-link {
+    	width: 100%;
+	}
+	#banner-youtube2 {
+	    margin: 45px 0px;
+	}
+	#info-sucursales {
+	    height: 245px !important;
+	}
+	.travelo-box {
+	    position: inherit !important;
+	}
+	.icon-box.style5 > i {
+	    display: none !important;
+	}
+	.icon-box.style5 {
+	    height: 220px;
+	    padding: 10px;
+    }
+    #atencion-quejas h5 {
+	    font-size: 0.9rem;
+	}
+	.icon-box.style5 .description {
+	    padding: 0px;
+	}
+	#general-servicios-a-bordo .seccion-servicios img,
+	#descripcion-servicios-a-bordo img, #galerias-servicios img {
+	    width: 100% !important;
+	}
+	#menu ul li a {
+	    font-size: 1.1em !important;
+	}
+	#menu i {
+    	font-size: 1.3rem !important;
+    }
+    #texto-descripcion-servicios h2,#seguridad #texto-descripcion-servicios h2, #galerias-servicios h2  {
+    	font-size: 1.6em !important;
+    }
+    #descripcion-servicios-a-bordo, #comodidad {
+    	background-size: cover !important;
+    }
+    #texto-descripcion-servicios p {
+	    font-size: 1.3em !important;
+	    padding: 10px !important;
+	}
+	#texto-descripcion-servicios,
+	#general-servicios-a-bordo .seccion-servicios {
+	    padding: 10px 0px 10px 0px !important;
+	}
+	.oculta-slider-txt-transporte {
+	    display: none;
+	}
+	.promo-text {
+	    margin-top: -15% !important;
+	}
+	.wpb_wrapper .box figure:before{
+	    background: transparent;
+	}
+	.interiores-exteriores .gal-img {
+	    height: auto !important;
+	}
+	#fancybox-wrap {
+	    display: none !important;
+	}
+	#contenido-afiliarse {
+	    background: none !important;
+	}
+	#contenido-afiliarse .registrarse{
+	    margin: 0 auto;
+	    display: block;
+	    text-align: center;
+	    font-size: 1.4rem;
+	    border-radius: 10px !important;
+	}
+	#contenido-afiliarse {
+    	padding: 50px 9px 50px 9px  !important;
+	    margin: 0 auto;
+	    display: block;
+	}
+}

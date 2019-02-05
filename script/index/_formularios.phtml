@@ -1,0 +1,1323 @@
+<div class="search-box-wrapper" id="venta-linea">
+    <div class="search-box container">
+        <ul class="search-tabs clearfix">
+            <li class="active"><a href="#boletos-tab" data-toggle="tab">Comprar boletos</a></li>
+            <li><a href="#factura-tab" data-toggle="tab">Facturación</a></li>
+        </ul>
+        <div class="visible-mobile">
+            <ul id="mobile-search-tabs" class="search-tabs clearfix">
+                <li class="active"><a href="#boletos-tab" data-toggle="tab">Comprar boletos</a></li>
+                <li><a href="#factura-tab" data-toggle="tab">Facturación</a></li>
+            </ul>
+        </div>
+        <div class="search-tab-content">
+            <div class="tab-pane fade active in " id="boletos-tab">
+                <div id="inicio-boleto" class="col-xs-12">
+                    <div class="title-form">
+                        <h2>Selección de destino</h2>
+                    </div>
+                    <form role="search" action="">
+                        
+                        <div class="row">
+                            <div class="form-group col-sm-3 col-md-3">
+                                <h4 class="title">Origen</h4>
+                                <div class="selector">
+                                    <select name="origen" class="full-width">
+                                        <option value="1" selected>Culiacán</option>
+                                        <option value="2">Mazatlán</option>
+                                        <option value="3">El rosario</option>
+                                        <option value="4">Escuinapa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                                <h4 class="title">Destino</h4>
+                                <div class="selector">
+                                    <select name="destino" class="full-width">
+                                        <option value="2" selected>Mazatlán</option>
+                                        <option value="3">El rosario</option>
+                                        <option value="4">Escuinapa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                                <h4 class="title">Salida</h4>
+                                <div class="datepicker-wrap from-today">
+                                    <input name="date_from" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-3">
+                                <h4 class="title">Regreso (Opcional)</h4>
+                                <div class="datepicker-wrap from-today">
+                                    <input name="date_to" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-continuar avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="inicio-horario" class="oculto ">
+                    <div class="title-form">
+                        <h2>Selección de horario</h2>
+                    </div>
+                    <form role="search" method="get" >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Salida</th>
+                                        <th>Fecha salida</th>
+                                        <th>Llegada</th>
+                                        <th>Fecha llegada</th>
+                                        <th>Escalas</th>
+                                        <th>Servicio</th>
+                                        <th>Precio</th>
+                                        <th>Promoción</th>
+                                        <th>&nbsp;</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php 
+                                    
+                                        $contador=1;
+                                        for ($contador=1; $contador < 15; $contador++) { 
+
+                                            switch ($contador) {
+                                                case '1':
+                                                    $id="horario1";
+                                                    $salida="08:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="10:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '2':
+                                                    $id="horario2";
+                                                    $salida="08:20";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="10:20";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '3':
+                                                    $id="horario3";
+                                                    $salida="08:40";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="10:40";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '4':
+                                                    $id="horario4";
+                                                    $salida="09:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="11:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '5':
+                                                    $id="horario5";
+                                                    $salida="09:20";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="11:20";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '6':
+                                                    $id="horario6";
+                                                    $salida="09:40";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="11:40";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '7':
+                                                    $id="horario7";
+                                                    $salida="10:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="12:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '8':
+                                                    $id="horario8";
+                                                    $salida="10:20";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="12:20";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '9':
+                                                    $id="horario9";
+                                                    $salida="10:40";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="12:40";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '10':
+                                                    $id="horario10";
+                                                    $salida="11:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="13:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '11':
+                                                    $id="horario11";
+                                                    $salida="11:20";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="13:20";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '12':
+                                                    $id="horario12";
+                                                    $salida="11:40";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="13:40";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '13':
+                                                    $id="horario13";
+                                                    $salida="12:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="14:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                case '14':
+                                                    $id="horario14";
+                                                    $salida="12:20";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="14:20";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+                                                default:
+                                                    $id="horario1";
+                                                    $salida="08:00";
+                                                    $fecha_salida="01/08/2017";
+                                                    $llegada="10:00";
+                                                    $fecha_llegada="01/08/2017";
+                                                    $escalas="0";
+                                                    $servicio="expreso";
+                                                    $precio="160";
+                                                    $promocion="viaje redondo";
+                                                    break;
+
+                                                    
+                                            }
+                                            $contenido_tabla_body='<tr id="'.$id.'">
+                                                                    <td>'.$salida.'</td>
+                                                                    <td>'.$fecha_salida.'</td>
+                                                                    <td>'.$llegada.'</td>
+                                                                    <td>'.$fecha_llegada.'</td>
+                                                                    <td>'.$escalas.'</td>
+                                                                    <td>'.$servicio.'</td>
+                                                                    <td>'.$precio.'</td>
+                                                                    <td>'.$promocion.'</td>
+                                                                    <td><button value="seleccion" name="seleccion-horario" class="btn animated btn-seleccionar" data-animation-type="bounce" data-animation-duration="1">Seleccionar</button></td>
+                                                               </tr>';
+                                            print_r($contenido_tabla_body);
+                                            
+                                        }
+                                     ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-horario avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-boleto regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+               <div id="inicio-pasajeros" class="oculto">
+                    <div class="title-form">
+                        <h2>Selección de pasajeros</h2>
+                    </div>
+                   <form role="search" method="get" >
+                        <div class="row">
+                            <div class="subtitle-form">
+                                <h3 >Favor de seleccionar los pasajeros que van a viajar (max: 10 personas)</h3>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4" id="contador" data-button="normal">
+                                <h4 class="title">Normal</h4>
+                                <input name="pasajero_normal" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4" id="contador" data-button="estudiante">
+                                <h4 class="title">Estudiante</h4>
+                                <input name="pasajero_estudiante" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4"  id="contador" data-button="maestro">
+                                <h4 class="title">Maestro</h4>
+                                <input name="pasajero_maestro" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4"  id="contador" data-button="inapam">
+                                <h4 class="title">Inapam</h4>
+                                <input name="pasajero_inapam" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4"  id="contador" data-button="medio">
+                                <h4 class="title">Medio</h4>
+                                <input name="pasajero_medio" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4"  id="contador" data-button="persona_discapacidad">
+                                <h4 class="title">Persona con discapacidad</h4>
+                                <input name="pasajero_persona_discapacidad" value="0" type="text" class="input-text resultado full-width" placeholder="0" />
+                                <button class="btn btn-default btn-formularios" data-shop-action="add"   id="mas" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-formularios" data-shop-action="deduct"  id="menos" disabled type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-pasajeros avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-horario regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+               <div id="inicio-datos" class="oculto">
+                   <div class="title-form">
+                        <h2>Selección de correo y teléfono</h2>
+                    </div>
+                    <form role="search" action="">
+                        
+                        <div class="row">
+                            <div class="form-group col-sm-4 col-md-4">
+                                <h4 class="title">Correo eléctronico(Opcional)</h4>
+                                <input type="text" name="email" class="input-text full-width" placeholder="example@hotmail.com" />
+                            </div>
+                            <div class="form-group col-sm-4 col-md-4">
+                                <h4 class="title">Número teléfonico</h4>
+                                <input type="text" name="telefono" class="input-text full-width" placeholder="9999-99-99-99" />
+                            </div>
+                            <div class="form-group prepago-form col-sm-4 col-md-4">
+                                <h4 class="title">Soy cliente prepago</h4>
+                                <input type="checkbox" name="prepago" value="" class="input-text full-width">
+                            </div>
+                            <div class="form-group prepago-form col-sm-6 col-md-6">
+                                <h4 class="title aviso-privacidad">Al dar click acepto haber leído el <a href="" title="">Aviso de privacidad</a>.</h4>
+                                
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-datos avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-pasajeros regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+               <div id="inicio-servicio" class="oculto">
+                   <div class="title-form">
+                        <h2>Selección tipo de servicio</h2>
+                    </div>
+                    <form role="search" action="">
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-12 ">
+                                <h4 class="title">Tipo de servicio</h4>
+                                <label class="radio-inline"><input type="radio" name="servicio" value="expreso">Expreso</label>
+
+                                <label class="radio-inline"><input type="radio" name="servicio" value="ordinario">Ordinario</label>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-servicio avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-datos regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+               <div id="asignar-asiento" class="oculto">
+                    <div class="title-form">
+                        <h2>Seleccionar asiento</h2>
+                    </div>
+                    <div class="container auto-style1" id="seleccionar-asiento">
+                        <div id="chofer">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/chofer.png" alt="">
+                        </div>
+                        <div class="row col-xs-3 col-md-12 fila-asientos fila-uno">
+                            
+                           <!--  <div class=" col-md-1 col-xs-1 vacio asiento-bus">
+                                &nbsp;
+                            </div> -->
+                            
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre"><img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">4</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">8</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">12</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">16</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">20</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">24</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">28</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">32</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">36</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_arriba.png" alt="">
+                                <span class="number-asiento">40</span></div>
+                        </div>
+                        <div class="row col-xs-3 col-md-12 fila-asientos arriba fila-dos">
+                            <!-- <div class="col-md-1 col-xs-12 vacio asiento-bus">&nbsp;</div> -->
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">3</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">7</span>
+                                </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">11</span>
+                                </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">15</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">19</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">23</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">27</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">31</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">35</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_abajo.png" alt="">
+                                <span class="number-asiento">39</span></div>
+                        </div>
+                        <div class="row col-xs-3 col-md-12 fila-asientos abajo fila-tres">
+                            <!-- <div class="col-md-1 col-xs-12 vacio asiento-bus">&nbsp;</div> -->
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">2</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                               <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_arriba.png" alt="">
+                                <span class="number-asiento">6</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_arriba.png" alt="">
+                                <span class="number-asiento">10</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">14</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">18</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">22</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">26</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">30</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_arriba.png" alt="">
+                                <span class="number-asiento">34</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_arriba.png" alt="">
+                                <span class="number-asiento">38</span></div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_arriba.png" alt="">
+                                <span class="number-asiento">42</span></div>
+                        </div>
+                        
+                        <div class="row col-xs-3 col-md-12 fila-asientos fila-cuatro">
+                            <!-- <div class="col-md-1 col-xs-1 general asiento-bus">
+                               &nbsp;
+                            </div> -->
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">1</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_abajo.png" alt="">
+                                <span class="number-asiento">5</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">9</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">13</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">17</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">21</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">25</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">29</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus libre">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                <span class="number-asiento">33</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_abajo.png" alt="">
+                                <span class="number-asiento">37</span>
+                            </div>
+                            <div class="col-md-1 col-xs-12 general asiento-bus ocupado">
+                                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_ocupado_abajo.png" alt="">
+                                <span class="number-asiento">41</span>
+                            </div>
+                        </div> 
+                        
+                    </div>
+                    <div class="container" id="opciones-asientos">
+                        <div class="row" >
+                            <div class="col-md-4 col-xs-4 contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro libre">
+                                        <div>
+                                        <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/asiento_vacio_abajo.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li>Libre</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-xs-4 contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro ocupado">
+                                        <div>
+                                        <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/ocupado.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li>Ocupado</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-xs-4 contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro seleccionado">
+                                        <div>
+                                        <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/autobus/seleccionado.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li>Seleccionado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <form role="search" action="">
+                        <div class="row">
+                            
+                           
+                            <div class="clearfix"></div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-asientos avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-asientos regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+               <?php /*
+                    <div id="inicio-asientos" class="oculto">
+                   <div class="title-form">
+                        <h2>Seleccionar asiento</h2>
+                    </div>
+                    <div class="container auto-style1" id="seleccionar-asiento">
+                        <div class="row fila-asientos">
+                            
+                            <div class=" col-md-1 vacio asiento-bus">
+                                &nbsp;</div>
+                            <div class="col-md-1 general asiento-bus">4</div>
+                            <div class="col-md-1 general asiento-bus">
+                                8</div>
+                            <div class="col-md-1 general asiento-bus">
+                                12</div>
+                            <div class="col-md-1 general asiento-bus">
+                                16</div>
+                            <div class="col-md-1 general asiento-bus">
+                                20</div>
+                            <div class="col-md-1 general asiento-bus">
+                                24</div>
+                            <div class="col-md-1 general asiento-bus">
+                                28</div>
+                            <div class="col-md-1 general asiento-bus">
+                                32</div>
+                            <div class="col-md-1 general asiento-bus">
+                                36</div>
+                            <div class="col-md-1 general asiento-bus">
+                                40</div>
+                        </div>
+                        <div class="row fila-asientos arriba">
+                            <div class="col-md-1 vacio asiento-bus">&nbsp;</div>
+                            <div class="col-md-1 general asiento-bus">3</div>
+                            <div class="col-md-1 general asiento-bus">
+                                7</div>
+                            <div class="col-md-1 general asiento-bus">
+                                11</div>
+                            <div class="col-md-1 general asiento-bus">
+                                15</div>
+                            <div class="col-md-1 general asiento-bus">
+                                19</div>
+                            <div class="col-md-1 general asiento-bus">
+                                23</div>
+                            <div class="col-md-1 general asiento-bus">
+                                27</div>
+                            <div class="col-md-1 general asiento-bus">
+                                31</div>
+                            <div class="col-md-1 general asiento-bus">
+                                35</div>
+                            <div class="col-md-1 general asiento-bus">
+                                39</div>
+                        </div>
+                        <div class="row fila-asientos abajo">
+                            <div class="col-md-1 vacio asiento-bus">&nbsp;</div>
+                            <div class="col-md-1 general asiento-bus">2</div>
+                            <div class="col-md-1 general asiento-bus ocupado">
+                                6</div>
+                            <div class="col-md-1 general asiento-bus ocupado">
+                                10</div>
+                            <div class="col-md-1 general asiento-bus">
+                                14</div>
+                            <div class="col-md-1 general asiento-bus">
+                                18</div>
+                            <div class="col-md-1 general asiento-bus">
+                                22</div>
+                            <div class="col-md-1 general asiento-bus">
+                                26</div>
+                            <div class="col-md-1 general asiento-bus">
+                                30</div>
+                            <div class="col-md-1 general asiento-bus">
+                                34</div>
+                            <div class="col-md-1 general asiento-bus ocupado">
+                                38</div>
+                            <div class="col-md-1 general asiento-bus ocupado">
+                                42</div>
+                        </div>
+                        <div class="row fila-asientos">
+                            <div class="col-md-1 general asiento-bus chofer"><i class="flaticon-chofer"></i></div>
+                            <div class="col-md-1 general asiento-bus">1</div>
+                            <div class="col-md-1 general asiento-bus ocupado">5</div>
+                            <div class="col-md-1 general asiento-bus">9</div>
+                            <div class="col-md-1 general asiento-bus">13</div>
+                            <div class="col-md-1 general asiento-bus">17</div>
+                            <div class="col-md-1 general asiento-bus">21</div>
+                            <div class="col-md-1 general asiento-bus">25</div>
+                            <div class="col-md-1 general asiento-bus">29</div>
+                            <div class="col-md-1 general asiento-bus">33</div>
+                            <div class="col-md-1 general asiento-bus ocupado">37</div>
+                            <div class="col-md-1 general asiento-bus ocupado">41</div>
+                        </div> 
+                        <div class="row" id="opciones-asientos">
+                            <div class="col-md-3 contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro libre">
+                                        <div>
+                                        &nbsp;
+                                        </div>
+                                    </li>
+                                    <li>Libre</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3  contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro ocupado">
+                                        <div>
+                                        &nbsp;
+                                        </div>
+                                    </li>
+                                    <li>Ocupado</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3  contenedor-opciones">
+                                <ul>
+                                    <li class="cuadro seleccionado">
+                                        <div>
+                                        &nbsp;
+                                        </div>
+                                    </li>
+                                    <li>Seleccionado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                        <label class="hidden-xs">&nbsp;</label>
+                        <button type="button" class="full-width animated inicio-asientos avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                        <label class="hidden-xs">&nbsp;</label>
+                        <button type="button" class="full-width animated volver-asientos regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                    </div>
+               </div>
+               */ ?>
+               <div id="inicio-datos-personales" class="oculto">
+                <div class="title-form">
+                    <h2>Selección de datos personales</h2>
+                </div>
+                <form role="search" action="">
+                    <div class="row">
+                        <div class="form-group col-sm-3 col-md-3 ">
+                            <h4 class="title">Mi llave(Opcional)</h4>
+                            <input type="text" name="datos-personales" class="input-text full-width" placeholder="Mi llave">
+                        </div>
+                        <div class="form-group col-sm-3 col-md-3 ">
+                            <h4 class="title">Nombre</h4>
+                            <input type="text" name="nombre-personal" class="input-text full-width" placeholder="Nombre">
+                        </div>
+                        <div class="form-group col-sm-3 col-md-3 ">
+                            <h4 class="title">Apellido</h4>
+                            <input type="text" name="apellido-personal" class="input-text full-width" placeholder="Apellido">
+                        </div>
+                        <div class="form-group col-sm-3 col-md-3 ">
+                            <h4 class="title">Sexo</h4>
+                            <label class="radio-inline"><input type="radio" name="genero" value="hombre">Hombre</label>
+                            <label class="radio-inline"><input type="radio" name="genero" value="mujer">Mujer</label>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                            <label class="hidden-xs">&nbsp;</label>
+                            <button type="button" class="full-width animated inicio-tipo-pago avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                            <label class="hidden-xs">&nbsp;</label>
+                            <button type="button" class="full-width animated volver-datos-personales regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                        </div>
+                    </div>
+                </form>
+               </div>
+               <div id="inicio-tipo-pago"  class="oculto">
+                    <div class="title-form">
+                        <h2>Selección tipo de pago</h2>
+                    </div>
+                    <form role="search" action="">
+                        
+                            <div class="row">
+                                <div class="form-group col-sm-4 col-md-2  col-md-offset-1 pago" >
+                                    
+                                    <label class="checkbox-inline "><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/visa_master.png "class="img-responsive" alt="Cinque Terre"  ></label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2 pago">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/2000px-American_Express_logo.png"class="img-responsive" alt="Cinque Terre"  ></label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2 pago">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/transfer2.png"class="img-responsive" alt="Cinque Terre"  ></label>
+                                    <label class=""><a href="">¿Cómo pagar con transfer?</a></label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2 pago">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/paypal2.png "class="img-responsive" alt="Cinque Terre"  ></label>
+                                    <label class=""><a href="">¿Qué es paypal?</a></label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2 pago">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/auscard-logo.png"class="img-responsive" alt="Cinque Terre"  ></label>
+                                </div>  
+                            </div>
+                            <!-- <div class="row">
+                                <div class="form-group col-sm-4 col-md-4 col-md-offset-2">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/paypal.png "class="img-responsive" alt="Cinque Terre" width="140" height="236" ></label>
+                                    <label class=""><a href="">¿Qué es paypal?</a></label>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-md-offset-2">
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox"><img  src="<?= Conectar::ruta_web()?>script/img_autotransportes/pagos/auscard-logo.png"class="img-responsive" alt="Cinque Terre" width="140" height="236" ></label>
+                                </div>  
+                            </div> -->
+                            <div class="row" id="totales">
+                                <div class="form-group col-xs-6 col-md-4 col-md-offset-8">
+                                    <div class="subtitle">
+                                        <div class="col-md-8 texto-pago">
+                                            <h2>Importe total a pagar</h2>   
+                                        </div>
+                                        <div class="col-md-4 monto-pago">
+                                            <label>$157.50</label>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class="form-group col-xs-6 col-md-4 col-md-offset-8">
+                                    <div class="subtitle">
+                                        <div class="col-md-8 texto-pago">
+                                           <h2>Usted ahorró</h2>
+                                        </div>
+                                        <div class="col-md-4 monto-pago">
+                                           <label>$17.50</label> 
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-6 col-md-4  col-md-offset-8">
+                                    <div class="subtitle">
+                                        <div class="col-md-8 texto-pago">
+                                            <h2>Monto a pagar</h2>  
+                                        </div>
+                                        <div class="col-md-4 monto-pago">
+                                            <label>$157.50</label>
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Número tarjeta de crédito/débito*</h4>
+                                    <input type="text" name="numero_tarjeta" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Número de seguridad*</h4>
+                                    <input type="text" name="numero_seguridad" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Fecha vencimiento Mes/Año*</h4>
+                                    <div class="col-md-5">
+                                        <input type="text" name="vencimiento_mes" class="input-text full-width"  />
+                                    </div>
+                                    <div class="col-md-2">
+                                        <span>/</span>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="text" name="vencimiento_anio" class="input-text full-width"  />
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Nombre(s) del tarjetahabiente*</h4>
+                                    <input type="text" name="nombre_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Apellido del tarjetahabiente*</h4>
+                                    <input type="text" name="apellido_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Dirección del tarjetahabiente*</h4>
+                                    <input type="text" name="direccion_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Código postal*</h4>
+                                    <input type="text" name="codigo_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Teléfono del tarjetahabiente*</h4>
+                                    <input type="text" name="telefono_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4">
+                                    <h4 class="title">Correo del tarjetahabiente*</h4>
+                                    <input type="text" name="correo_tarjetahabiente" class="input-text full-width"  />
+                                </div>
+                                <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                    <label class="hidden-xs">&nbsp;</label>
+                                    <button type="button" class="full-width animated inicio-terminos avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                                </div>
+                                <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                    <label class="hidden-xs">&nbsp;</label>
+                                    <button type="button" class="full-width animated volver-tipo-pago regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                                </div>
+                            </div>
+                    </form>
+               </div>
+               <div id="inicio-terminos" class="oculto">
+                    <div class="title-form">
+                        <h2>Términos y condiciones</h2>
+                    </div>
+                    <form role="search" action="">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Boleto de abordar</h3>
+                                <div class="texto-terminos">
+                                    <ul class="contenido-terminos">
+                                        <li><span class="numero-terminos">1</span> Este es un boleto de abordar, por lo cual es su obligación el cuidado y conservación del mismo en buen estado, ya que es su seguro de viajero y le da derecho a 25kg de equipaje sin costo.</li>
+                                        <li><span class="numero-terminos">2</span> Este boleto es válido únicamente para la fecha, hora, origen y destino, especificadas en el mismo.</li>
+                                        <li><span class="numero-terminos">3</span> No hay <span class="txt-terminos">cancelaciones</span>, <span class="txt-terminos">reembolsos</span> y/o <span class="txt-terminos">devoluciones</span> en este tipo de compra.</li>
+                                        <li><span class="numero-terminos">4</span> Si desea realizar algún cambio en este boleto, sólo podrá efectuarlo en taquillas y/o puntos de venta directos, antes del día y hora de salida, presentado una identificación oficial además de este boleto.</li>
+                                        <li><span class="numero-terminos">5</span> Deberá presentarse directamente en los andenes 30 minutos antes de su salida, con el boleto que emite este medio además de una identificación oficial(credencial de elector, licencia de manejo, cedula profesional o pasaporte vigentes, y en caso de estudiante, maestro o insen, su credencial vigente).</li>
+                                        <li><span class="numero-terminos">6</span> Documente su equipaje 30 minutos antes de su salida.</li>
+                                        <li><span class="numero-terminos">7</span> En caso de menores de edad, podrán abordar con la identificación del adulto que los acompañe.</li>
+                                        <li><span class="numero-terminos">8</span> El pasajero acepta que la operación del autobús en el que se realiza el viaje amparado en el boleto, así como todo incidente, siniestro y cualquier responsabilidad derivada de la misma, frente a pasajeros o terceros sean de cualquier nacionalidad, tanto en su persona con sus bienes se rige por las leyes, disposiciones reglamentarias y normativas del país o Estado en donde ocurrieren los hechos.</li>
+                                        <li><span class="numero-terminos">9</span> La empresa no se responsabiliza por equipajes sin talón o por bultos u otras pertenencias de mano que el pasajero lleve consigo en el interior del autobús, en caso de perdida y/o extravío del equipaje documentado, se pagara una indemnizaci´n hasta por el equivalente máximo a 20 días de salario mínimo general vigente en el D.F.</li>
+                                        <li><span class="numero-terminos">10</span> En territorio de los Estados Unidos Mexicanos, el boleto cumple con los requisitos del artículo 70 del Reglamento de Autotransporte Federal y Servicios Auxiliares y es comprobante que se expide de conformidad al Art. 37 del Reglamento del Código Fiscal de la Federación, por las operaciones realizadas con el público en general.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           
+                            <div class="clearfix"></div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated inicio-tipo-pago avanzar-btn" data-animation-type="bounce" data-animation-duration="1">Continuar</button>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                                <label class="hidden-xs">&nbsp;</label>
+                                <button type="button" class="full-width animated volver-terminos regresar-btn" data-animation-type="bounce" data-animation-duration="1">Regresar</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+               <div id="inicio-boleto-generado" class="oculto">
+                    <div class="title-form">
+                        <h2>Boleto generado con éxito</h2>
+                    </div>
+                    <form role="search" action="">
+                        <div class="row">
+                            <div class="col-md-6 datos-boleto-generado">
+                                   
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">No. de operación:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="numero_operacion" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Nit:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="nit" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Origen:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="origen" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Destino:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="destino" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Fecha de salida:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="fecha_salida" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Hora de salida:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="hora_salida" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="col-md-3 general  titulo-boleto-generado">
+                                    <h4 class="title">Tipo de servicio:</h4>
+                                </div>
+                                <div class="col-md-3 general  contenido-boleto-generado">
+                                    <input type="text" name="tipo_servicio" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general margin-extra titulo-boleto-generado">
+                                    <h4 class="title">Pasajero:</h4>
+                                </div>
+                                <div class="col-md-3 general margin-extra contenido-boleto-generado">
+                                    <input type="text" name="pasajero" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Asiento:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="asiento" class="input-text full-width" value="xxxx" />
+                                </div>
+                                 <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Corrida:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="corrida" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Tipo pasajero:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="tipo_pasajero" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Monto bruto:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="monto_bruto" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">IVA:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="iva" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Monto total:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="monto_total" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Forma de pago:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="forma_pago" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title ">Afiliación:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="afiliacion" class="input-text full-width" value="xxxx" />
+                                </div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="col-md-3 general titulo-boleto-generado">
+                                    <h4 class="title">Hora venta:</h4>
+                                </div>
+                                <div class="col-md-3 general contenido-boleto-generado">
+                                    <input type="text" name="hora_venta" class="input-text full-width" value="xxxx" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 datos-terminos-boleto">
+                                <h3>Autotransportes Unidos de Sinaloa</br>RFC: AUS901226 AB0</h3>
+                                <h3>Términos y condiciones</h3>
+                                <div class="texto-terminos">
+                                    <ul class="contenido-terminos">
+                                        <li><span class="numero-terminos">1</span> Este es un boleto de abordar, por lo cual es su obligación el cuidado y conservación del mismo en buen estado, ya que es su seguro de viajero y le da derecho a 25kg de equipaje sin costo.</li>
+                                        <li><span class="numero-terminos">2</span> Este boleto es válido únicamente para la fecha, hora, origen y destino, especificadas en el mismo.</li>
+                                        <li><span class="numero-terminos">3</span> No hay <span class="txt-terminos">cancelaciones</span>, <span class="txt-terminos">reembolsos</span> y/o <span class="txt-terminos">devoluciones</span> en este tipo de compra.</li>
+                                        <li><span class="numero-terminos">4</span> Si desea realizar algún cambio en este boleto, sólo podrá efectuarlo en taquillas y/o puntos de venta directos, antes del día y hora de salida, presentado una identificación oficial además de este boleto.</li>
+                                        <li><span class="numero-terminos">5</span> Deberá presentarse directamente en los andenes 30 minutos antes de su salida, con el boleto que emite este medio además de una identificación oficial(credencial de elector, licencia de manejo, cedula profesional o pasaporte vigentes, y en caso de estudiante, maestro o insen, su credencial vigente).</li>
+                                        <li><span class="numero-terminos">6</span> Documente su equipaje 30 minutos antes de su salida.</li>
+                                        <li><span class="numero-terminos">7</span> En caso de menores de edad, podrán abordar con la identificación del adulto que los acompañe.</li>
+                                        <li><span class="numero-terminos">8</span> El pasajero acepta que la operación del autobús en el que se realiza el viaje amparado en el boleto, así como todo incidente, siniestro y cualquier responsabilidad derivada de la misma, frente a pasajeros o terceros sean de cualquier nacionalidad, tanto en su persona con sus bienes se rige por las leyes, disposiciones reglamentarias y normativas del país o Estado en donde ocurrieren los hechos.</li>
+                                        <li><span class="numero-terminos">9</span> La empresa no se responsabiliza por equipajes sin talón o por bultos u otras pertenencias de mano que el pasajero lleve consigo en el interior del autobús, en caso de perdida y/o extravío del equipaje documentado, se pagara una indemnizaci´n hasta por el equivalente máximo a 20 días de salario mínimo general vigente en el D.F.</li>
+                                        <li><span class="numero-terminos">10</span> En territorio de los Estados Unidos Mexicanos, el boleto cumple con los requisitos del artículo 70 del Reglamento de Autotransporte Federal y Servicios Auxiliares y es comprobante que se expide de conformidad al Art. 37 del Reglamento del Código Fiscal de la Federación, por las operaciones realizadas con el público en general.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+            </div>
+            <div class="tab-pane fade" id="factura-tab">
+                <!-- <form role="search" method="get" action="">
+                    <input type="hidden" name="post_type" value="tour">
+                    <div class="row">
+                        <div class="form-group col-sm-4 col-md-3">
+                            <h4 class="title">Where</h4>
+                            <label>Destination </label>
+                            <input type="text" name="s" class="input-text full-width" placeholder="Enter a destination or tour name" />
+                        </div>
+                        <div class="form-group col-sm-8 col-md-4">
+                            <h4 class="title">When</h4>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label>From</label>
+                                    <div class="datepicker-wrap from-today">
+                                        <input name="date_from" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label>To</label>
+                                    <div class="datepicker-wrap from-today">
+                                        <input name="date_to" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 fixheight">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label>Trip Type</label>
+                                    <div class="selector">
+                                        <select name="tour_types" class="full-width">
+                                            <option value="">Trip Type</option>
+                                            <option value="47">City Tour</option>
+                                            <option value="48">Cultural</option>
+                                            <option value="50">Honeymoon</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label>Budget</label>
+                                    <input type="text" name="max_price" class="input-text full-width" placeholder="Max Budget (usd)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                            <label class="hidden-xs">&nbsp;</label>
+                            <button type="submit" class="full-width animated" data-animation-type="bounce" data-animation-duration="1">SEARCH NOW</button>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-2 col-xs-12 fixheight">
+                            <label class="hidden-xs">&nbsp;</label>
+                            <button type="submit" class="full-width animated" data-animation-type="bounce" data-animation-duration="1">SEARCH NOW</button>
+                        </div>
+                    </div>
+                </form> -->
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+            
+            <script>
+            var jQuery = jQuery.noConflict();
+            jQuery("#venta-linea .avanzar-btn").click(function () {
+                jQuery('html,body').animate({
+                    scrollTop: jQuery("#content #venta-linea").offset().top
+                }, 500);
+            });
+            jQuery("#venta-linea .regresar-btn").click(function () {
+                jQuery('html,body').animate({
+                    scrollTop: jQuery("#content #venta-linea").offset().top
+                }, 500);
+            });
+                jQuery("#inicio-boleto").on("click",".inicio-continuar",function(){
+                    jQuery('#inicio-horario').show();
+                    jQuery('#inicio-boleto').hide();
+                });
+
+                jQuery("#inicio-horario").on("click",".volver-boleto",function(){
+                    jQuery('#inicio-horario').hide();
+                    jQuery('#inicio-boleto').show();
+                });
+
+                jQuery("#inicio-horario").on("click",".inicio-horario",function(){
+                    jQuery('#inicio-pasajeros').show();
+                    jQuery('#inicio-horario').hide();
+                });
+
+                jQuery("#inicio-pasajeros").on("click",".volver-horario",function(){
+                    jQuery('#inicio-pasajeros').hide();
+                    jQuery('#inicio-horario').show();
+                });
+
+                jQuery("#inicio-pasajeros").on("click",".inicio-pasajeros",function(){
+                    jQuery('#inicio-datos').show();
+                    jQuery('#inicio-pasajeros').hide();
+                });
+
+                jQuery("#inicio-datos").on("click",".volver-pasajeros",function(){
+                    jQuery('#inicio-datos').hide();
+                    jQuery('#inicio-pasajeros').show();
+                });
+
+                jQuery("#inicio-datos").on("click",".inicio-datos",function(){
+                    jQuery('#inicio-servicio').show();
+                    jQuery('#inicio-datos').hide();
+                });
+
+                jQuery("#inicio-servicio").on("click",".volver-datos",function(){
+                    jQuery('#inicio-servicio').hide();
+                    jQuery('#inicio-datos').show();
+                });
+
+                jQuery("#inicio-servicio").on("click",".inicio-servicio",function(){
+                    jQuery('#asignar-asiento').show();
+                    jQuery('#inicio-servicio').hide();
+                });
+
+                jQuery("#asignar-asiento").on("click",".volver-asientos",function(){
+                    jQuery('#asignar-asiento').hide();
+                    jQuery('#inicio-servicio').show();
+                });
+                jQuery("#asignar-asiento").on("click",".inicio-asientos",function(){
+                    jQuery('#inicio-datos-personales').show();
+                    jQuery('#asignar-asiento').hide();
+                });
+                jQuery("#inicio-datos-personales").on("click",".volver-datos-personales",function(){
+                    jQuery('#inicio-datos-personales').hide();
+                    jQuery('#asignar-asiento').show();
+                });
+
+                jQuery("#inicio-datos-personales").on("click",".inicio-tipo-pago",function(){
+                    jQuery('#inicio-tipo-pago').show();
+                    jQuery('#inicio-datos-personales').hide();
+                });
+
+                jQuery("#inicio-tipo-pago").on("click",".volver-tipo-pago",function(){
+                    jQuery('#inicio-tipo-pago').hide();
+                    jQuery('#inicio-datos-personales').show();
+                });
+
+                jQuery("#inicio-tipo-pago").on("click",".inicio-terminos",function(){
+                    jQuery('#inicio-terminos').show();
+                    jQuery('#inicio-tipo-pago').hide();
+                });
+
+                jQuery("#inicio-terminos").on("click",".volver-terminos",function(){
+                    jQuery('#inicio-terminos').hide();
+                    jQuery('#inicio-tipo-pago').show();
+                });
+
+                jQuery("#inicio-terminos").on("click",".inicio-tipo-pago",function(){
+                    jQuery('#inicio-boleto-generado').show();
+                    jQuery('#inicio-terminos').hide();
+                });
+
+                jQuery(document).on("click","#contador #mas",function(){
+
+                    var valor= jQuery(this).parents('#contador').find('.resultado').val();
+                    var total = parseInt(valor)+1;
+
+                    jQuery(this).parents('#contador').find('.resultado').attr('value',total);
+                    if(total>0){
+                        jQuery(this).parents('#contador').find('#menos').attr('disabled',false);
+                    };
+                    
+                });
+
+                jQuery(document).on("click","#contador #menos",function(){
+
+                    var valor= jQuery(this).parents('#contador').find('.resultado').val();
+                    var total = parseInt(valor)-1;
+
+                    jQuery(this).parents('#contador').find('.resultado').attr('value',total);
+                    if (total<="0") {
+                        jQuery(this).parents('#contador').find('#menos').attr('disabled',true);
+                    }else if(total>0){
+                        jQuery(this).parents('#contador').find('#menos').attr('disabled',false);
+                    };
+                    
+                });
+                // jQuery('#contador').on("click","#mas",function(){
+                //     var valor= jQuery('.resultado').val();
+                //     var total = parseInt(valor)+1;
+
+                //     jQuery('.resultado').attr('value',total);
+                //     if(total>0){
+                //         jQuery("#menos").attr('disabled',false);
+                //     };
+                    
+                // });
+
+
+
+
+                // jQuery('#contador').on("click","#menos",function(){
+                //     var valor= jQuery('.resultado').val();
+                //     var total = parseInt(valor)-1;
+
+                //     jQuery('.resultado').attr('value',total);
+                //     if (total<="0") {
+                //         jQuery("#menos").attr('disabled',true);
+                //     }else if(total>0){
+                //         jQuery("#menos").attr('disabled',false);
+                //     };
+                // });
+            </script>

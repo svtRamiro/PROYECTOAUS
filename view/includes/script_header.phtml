@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="<?= Conectar::ruta_web()?>script/plugins/sitepress-multilingual-cms/res/css/language-selector9ea4.css" type="text/css" media="all" />
+<!-- Meta Tags -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php /*
+<link rel='stylesheet' id='contact-form-7-css' href='<?= Conectar::ruta_web()?>script/plugins/contact-form-7/styles3a05.css' type='text/css' media='all' />
+*/ ?>
+<link rel='stylesheet' id='rs-plugin-settings-css' href='<?= Conectar::ruta_web()?>script/plugins/revslider/rs-plugin/css/settings1dc6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_font_googleapis-css' href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&amp;' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_animate-css' href='<?= Conectar::ruta_web()?>script/css/animate.min9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_font_awesome-css' href='<?= Conectar::ruta_web()?>script/css/font-awesome9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_bootstrap-css' href='<?= Conectar::ruta_web()?>script/css/bootstrap.min9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_flexslider-css' href='<?= Conectar::ruta_web()?>script/js/components/flexslider/flexslider9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_bxslider-css' href='<?= Conectar::ruta_web()?>script/js/components/jquery.bxslider/jquery.bxslider9712.css' type='text644css' media='all' />
+<link rel='stylesheet' id='trav_style_main_style-css' href='<?= Conectar::ruta_web()?>script/css/style-light-blue9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_custom-css' href='<?= Conectar::ruta_web()?>script/css/custom9712.css' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="<?= Conectar::ruta_web()?>script/images/iconos/flaticon.css"> 
+<link rel="stylesheet" href="<?= Conectar::ruta_web()?>script/fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<!--GALERIA-->
+<link href="<?= Conectar::ruta_web()?>script/galery_mdb/css/animate.css" rel="stylesheet">
+<link href="<?= Conectar::ruta_web()?>script/galery_mdb/css/default.css" rel="stylesheet" type="text/css" media="all">
+<link href="<?= Conectar::ruta_web()?>script/galery_mdb/css/magnific-popup.css" rel="stylesheet" type="text/css" media="all">
+<!--FIN GALERIA-->
+
+<link rel='stylesheet' id='trav_style_custom-css' href='<?= Conectar::ruta_web()?>script/css/miestilo.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_custom-css' href='<?= Conectar::ruta_web()?>script/css/responsivo_web.css' type='text/css' media='all' />
+
+<style id='trav_style_custom-inline-css' type='text/css'>
+#header .logo a,
+#footer .bottom .logo a,
+.chaser .logo a,
+.logo-modal {
+    background-image: url(<?= Conectar::ruta_web()?>script/images/logo/logo_central.png);
+    background-repeat: no-repeat;
+    /*display: block;*/
+}
+
+.chaser .logo a {
+    background-size: auto 20px;
+}
+</style>
+<link rel='stylesheet' id='trav_style_responsive-css' href='<?= Conectar::ruta_web()?>script/css/responsive9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='<?= Conectar::ruta_web()?>script/plugins/js_composer/assets/css/js_composer.min5859.css' type='text/css' media='all' />
+<?php /*
+<link rel='stylesheet' id='mc4wp-form-basic-css' href='<?= Conectar::ruta_web()?>script/plugins/mailchimp-for-wp/assets/css/form-basic.min1678.css' type='text/css' media='all' />
+*/ ?>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery/jqueryc1d8.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery/jquery-migrate.min1576.js'></script>
+<script type="text/javascript" src='<?= Conectar::ruta_web()?>script/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js'></script>
+<script type="text/javascript" src='<?= Conectar::ruta_web()?>script/fancybox/fancybox/jquery.easing-1.3.pack.js'></script>
+<script type="text/javascript" src='<?= Conectar::ruta_web()?>script/fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js'></script>
+<?php /*
+*/ ?>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    // CUSTOM AJAX CONTENT LOADING FUNCTION
+    var ajaxRevslider = function(obj) {
+        var content = "";
+        data = {};
+        data.action = 'revslider_ajax_call_front';
+        data.client_action = 'get_slider_html';
+        data.token = '86fb437efc';
+        data.type = obj.type;
+        data.id = obj.id;
+        data.aspectratio = obj.aspectratio;
+        jQuery.ajax({
+            type: "post",
+            url: "/",
+            dataType: 'json',
+            data: data,
+            async: false,
+            success: function(ret, textStatus, XMLHttpRequest) {
+                if (ret.success == true)
+                    content = ret.data;
+            },
+            error: function(e) {
+                console.log(e);
+            }
+        });
+        return content;
+    };
+    var ajaxRemoveRevslider = function(obj) {
+        return jQuery(obj.selector + " .rev_slider").revkill();
+    };
+    var extendessential = setInterval(function() {
+        if (jQuery.fn.tpessential != undefined) {
+            clearInterval(extendessential);
+            if (typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                jQuery.fn.tpessential.defaults.ajaxTypes.push({
+                    type: "revslider",
+                    func: ajaxRevslider,
+                    killfunc: ajaxRemoveRevslider,
+                    openAnimationSpeed: 0.3
+                });
+            }
+        }
+    }, 30);
+});
+</script>
+
+<style type="text/css" data-type="vc_shortcodes-custom-css">
+.vc_custom_1459450325173 {
+    padding-top: 80px !important;
+}
+
+.vc_custom_1459450367450 {
+    padding-bottom: 70px !important;
+}
+</style>
+<noscript>
+    <style type="text/css">
+    .wpb_animate_when_almost_visible {
+        opacity: 1;
+    }
+    </style>
+</noscript>

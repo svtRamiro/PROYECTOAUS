@@ -1,0 +1,643 @@
+.mod_sucursal_culiacan {
+    text-align: justify !important;
+}
+.mapa-extendido iframe {
+    width: 100% !important;
+}
+#contenido_sucursal_direccion {
+    background: #f47722;
+}
+#contenido_sucursal_direccion {
+    background: #f47722;
+    padding: 15px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+#contenido_sucursal_direccion h2 {
+    color: white;
+}
+#contenido_sucursal_direccion h3 {
+    text-transform: uppercase;
+    color: #702d00 !important;
+    font-weight: bold;
+}
+#contenido_sucursal_direccion p {
+    font-size: 1.2rem !important;
+    color: #702d00 !important;
+}
+#contenido_sucursal_direccion i {
+    font-size: 2.8rem;
+    line-height: 1.5em !important;
+    color: #a21e20;
+    border-radius: 50% !important;
+}
+#contenido_sucursal_direccion h2 {
+    color: #a21e20;
+    text-transform: uppercase !important;
+    font-size: 2rem;
+    font-weight: bold !important;
+    line-height: 1.5em !important;
+}
+#contenido_sucursal_direccion {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    border-top: 1px solid #e2e2e2;
+    margin-top: 4% !important;
+}
+.social-icons li a {
+    width: 50PX;
+    margin-right: 4px;
+    height: 50px;
+    display: inline-block;
+    background: #651214;
+    color: #a21e20;
+    line-height: 32px;
+    font-size: 1.3333em;
+    -moz-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    -webkit-transition: opacity 0.3s ease-in;
+    -ms-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+}
+.soap-icon-facebook:before,
+.soap-icon-twitter:before,
+.soap-icon-googleplus:before,
+.soap-icon-youtube:before,
+.soap-icon-instagram:before,
+.soap-icon-pinterest:before {
+    padding: 15px !important;
+}
+header#header ul.quick-menu.pull-right .soap-icon-facebook:before,
+header#header ul.quick-menu.pull-right .soap-icon-twitter:before,
+header#header ul.quick-menu.pull-right .soap-icon-googleplus:before,
+header#header ul.quick-menu.pull-right .soap-icon-youtube:before,
+header#header ul.quick-menu.pull-right .soap-icon-instagram:before, 
+header#header ul.quick-menu.pull-right .soap-icon-pinterest:before,
+header#header ul.quick-menu.pull-right .soap-icon-linkedin:before  {
+    padding: 15px !important;
+    padding: 0px 25px 0px 25px !important;
+}
+.social-icons li a i {
+    font-size: 1.5em;
+    padding: 3px;
+}
+i.soap-icon-instagram {
+    color: white !important;
+}
+.search-box-wrapper {
+    background: url(../images/inicio/fondo-inicio-2.jpg);
+    margin-top: -40px !important;
+}
+ul.search-tabs li a {
+    background: #5d0303 !important;
+}
+
+ul.search-tabs li.active a { 1;
+    color: white !important;
+}
+ul.search-tabs li.active a {
+    color: white  !important;
+    border-bottom: 1px solid #faa41a  !important;
+}
+.vc_row.wpb_row.vc_inner.vc_row-fluid.offer.vc_custom_1459450367450.inner-container .wpb_wrapper .box {
+    border: 2px solid #bc5a5e57 !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+div#formulario_encuesta {
+    border: 1px solid whitesmoke;
+    margin: 0 auto;
+    border-radius: 20px;
+    /* text-align: center; */
+    overflow: hidden;
+    padding: 15px 28px;
+    background: #17171740;
+}
+div#promocion-video iframe {
+    border: 4px solid #741a1a26 !important;
+    padding: 8px;
+    border-radius: 20px !important;
+    border-style: double !important;
+}
+h1.txt-dos span {
+    color: #f47023 !important;
+    font-size: 6rem;
+    text-shadow: 2px 2px 1px black;
+}
+h1.txt-tres {
+    color: red !important;
+    text-transform: uppercase !important;
+    /* text-decoration: underline; */
+    text-shadow: -2px 2px 2px black;
+}
+.parte1 {
+    font-size: 0.9rem;
+}
+.header-fondo-culiacan {
+    background-image: url(../../script/images/destinos/culiacan/panoramica-culiacan.jpg);
+    position: relative;
+    height: 500px !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.mod_sucursal_culiacan h1 {
+    font-size: 2.5rem;
+    color: #a21e20;
+}
+.header-fondo-culiacan .section-header {
+    background: #ffffff52 !important;
+    padding-top: 15px;
+}
+.header-fondo-culiacan h2 {
+    background: transparent;
+    padding-left: 16px;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+.header-fondo-culiacan .col-md-4.section-link h4 a {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+.header-fondo-culiacan.mazatlan {
+    background-image: url(../../script/images/destinos/mazatlan/portada_mazatlan.jpg);
+}
+.header-fondo-culiacan.rosario {
+    background-image: url(../../script/images/destinos/rosario/portada_rosario.jpg);
+}
+.header-fondo-culiacan.escuinapa{
+    background-image: url(../../script/images/destinos/escuinapa/portada-escuinapa.jpg);
+}
+.container-fluid.header-fondo.serviciosabordo{
+    background-image: url(../../script/images/serviciosabordo/portada-seguridad.jpg);
+}
+.sucursales_contacto h1 {
+    color: #f99d1c;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.sucursales_contacto p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#info-sucursales {
+    background: white;
+    height: 185px !important;
+    box-shadow: inset -1px -2px 0px #f79525;
+    padding-top: 14px !important;
+}
+p.iconos_sucursales_contacto {
+    background: #5c0202 !important;
+    width: 30px  !important;
+    height: 30px  !important;
+    display: flex !important;
+    align-items: center  !important;
+    justify-content: center  !important;
+    border-radius: 50%  !important;
+}
+p.iconos_sucursales_contacto i {
+    font-size: 1.1rem;
+    color: white;
+}
+#titulo-sucursales-contacto-p p {
+    font-size: 1rem;
+}
+.section-contacto input.input-text, .section-contacto input.wpcf7-text, .section-contacto select, .section-contacto textarea, .section-contacto span.custom-select, 
+.section-contacto input[type="password"] {
+    background: white;
+    border: 1px solid #fec22380;
+    line-height: normal;
+    color: #900909 !important;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.section-contacto .travelo-box.box-full h2 {
+    color: rgb(97, 47, 11);
+    border-bottom: 2px solid #e68312;
+    padding-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    margin-bottom: 32px;
+}
+.travelo-box {
+    background: #f79525ad;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+}
+.section-contacto label {
+    color: #612f03;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+.container-fluid.header-fondo.serviciosabordo:before {
+    background: transparent !important;
+}
+#descripcion-servicios-a-bordo {
+    background-image: url(../images/serviciosabordo/inicio.png);
+    background-size: 100% !important;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+}
+#descripcion-servicios-a-bordo img , #galerias-servicios img{
+    width: 400px !important;
+    border-radius: 50%;
+    border: 2px inset #f53522;
+    box-shadow: 0 0 10px black;
+    margin-top: 50px;
+}
+#general-servicios-a-bordo {
+    background-image: url(../images/serviciosabordo/fondo-security.jpg) !important;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+div#galerias-servicios{
+    background-image: url(../images/serviciosabordo/fotos.png) !important;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#general-servicios-a-bordo:before {
+    background: transparent !important;
+}
+#comodidad {
+    background-image: url(../images/serviciosabordo/comodidad.png);
+    background-size: 100% !important;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+    padding-top: 90px !important;
+}
+#texto-descripcion-servicios p {
+    color: #ffffff;
+    font-size: 1.8em;
+    text-align: justify;
+}
+#seguridad #texto-descripcion-servicios h2 {
+    color: #f78f22 !important;
+}
+#seguridad img {
+    width: 400px !important;
+    border-radius: 50%;
+    border: 2px inset #f53522;
+    box-shadow: 0 0 10px black;
+    margin-top: 50px;
+}
+#img-descripcion-servicios {
+    text-align: center;
+}
+#general-servicios-a-bordo p , #texto-descripcion-servicios p {
+    color: white !important;
+}
+#comodidad img , #tecnologia img{
+    width: 400px !important;
+    border-radius: 50%;
+    border: 2px inset #f53522;
+    box-shadow: 0 0 10px black;
+    margin-top: 50px;
+}
+#tecnologia h2 {
+    color: #f78f22 !important;
+}
+
+#menu.fixed li a {
+    color: white !important;
+    line-height: 1.5em;
+}
+#menu.fixed {
+    position: fixed;
+    background: #f47123c7;
+    padding: 10px;
+    right: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#menu i {
+    font-size: 1.7rem !important;
+    color: #520807;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#menu.fixed li a:hover {
+    color: #490e10 !important;
+}
+
+
+
+
+
+
+/********************************************************/
+/********************************************************/
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.gal-container{
+    padding: 12px;
+}
+.gal-item{
+    overflow: hidden;
+    padding: 3px;
+}
+.gal-item .box{
+    height: 350px;
+    overflow: hidden;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    -o-object-fit:cover;
+}
+.gal-item a:focus{
+    outline: none;
+}
+.gal-item a:after{
+    content:"\e003";
+    font-family: 'Glyphicons Halflings';
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 3px;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+    text-align: center;
+    line-height: 350px;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.gal-item a:hover:after{
+    opacity: 1;
+}
+.modal-open .gal-container .modal{
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-open .gal-item .modal-body{
+    padding: 0px;
+}
+.modal-open .gal-item button.close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    z-index: 999;
+    right: -12px;
+    top: -12px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 2px solid #fff;
+    line-height: 25px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+}
+.modal-open .gal-item button.close:focus{
+    outline: none;
+}
+.modal-open .gal-item button.close span{
+    position: relative;
+    top: -3px;
+    font-weight: lighter;
+    text-shadow:none;
+}
+.gal-container .modal-dialogue{
+    width: 80%;
+}
+.gal-container .description{
+    position: relative;
+    height: 40px;
+    top: -40px;
+    padding: 10px 25px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: left;
+}
+.gal-container .description h4{
+    margin:0px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.gal-container .modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 100px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gal-container .modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    opacity: 1;
+}
+@media (min-width: 768px) {
+.gal-container .modal-dialog {
+    width: 55%;
+    margin: 50 auto;
+}
+}
+@media (max-width: 768px) {
+    .gal-container .modal-content{
+        height:250px;
+    }
+}
+/* Footer Style */
+i.red{
+    color:#BC0213;
+}
+.gal-container{
+    padding-top :75px;
+    padding-bottom:75px;
+}
+footer{
+    font-family: 'Quicksand', sans-serif;
+}
+footer a,footer a:hover{
+    color: #88C425;
+}
+.ta-portfolio-box .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px !important;
+}
+#galerias-servicios img {
+    width: auto !important;
+    border-radius: 10px !important;
+    background: transparent !o;
+}
+.ta-portfolio-box {
+    padding: 0px;
+}
+
+.ta-portfolio-box:hover {
+    transform: none !important;;
+    transition: none !important;;
+}
+.ta-portfolio-box {
+    border-style: solid;
+    border-width: 0px !important;;
+}
+.ta-portfolio-box figure img {
+    min-height: 125px;
+}
+div#galerias-servicios h2{
+    font-size: 4em;
+    font-weight: bold;
+    color: #a21e20;
+    border-bottom: 4px solid;
+    text-transform: uppercase;
+}
+input.input-text, input.wpcf7-text, select, textarea, span.custom-select, input[type="password"] {
+    border-radius: 10px !important;
+}
+.datepicker-wrap:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ul.search-tabs li a {
+    float: left;
+    padding-right: 4px;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px;
+    border: 1px solid #fec222;
+}
+select option {
+    color: #5d0303;
+}
+.global-map-area {
+    background: url(../img_autotransportes/pagina/fondo_map.jpg) no-repeat;
+    background-size: cover !IMPORTANT;
+}
+.icon-servicios h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.5em;
+}
+.ta-portfolio-box, .ta-portfolio-box figure {
+    background: transparent !important;
+    border: none !important;
+}
+.ta-portfolio-box .overlay .btn {
+    top: 42%;
+}
+.ta-portfolio-box .overlay .btn:hover, .ta-portfolio-box .overlay .btn:focus {
+    background: #febb20;
+    border-color: #f1ac1d;
+}
+#footer .social-icons li a {
+    color: white;
+    margin: 0px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+header#header ul.quick-menu.pull-right i {
+    font-size: 2em !important;
+    color: #ffffff;
+    padding: 0px !important;
+    margin: 0 auto !important;
+    -webkit-filter: drop-shadow(0px 0px 0px #000);
+    -moz-filter: drop-shadow(0px 0px 0px #000);
+    -ms-filter: drop-shadow(0px 0px 0px #000);
+    -o-filter: drop-shadow(0px 0px 0px #000);
+    filter: drop-shadow(1px 1px 0px #000);
+}
+div#comodidad p {
+    color: #4b1110 !important;
+}
+
+div#descripcion-servicios-a-bordo div#texto-descripcion-servicios p {
+    color: #4b1110 !important;
+}
+#header .quick-menu.pull-right li, #header ul.quick-menu.pull-right li:hover {
+    background: transparent;
+}
+#header .topnav ul.quick-menu > li > a .soap-icon-twitter:hover {
+    color: #5da9dd;
+}
+#header .topnav ul.quick-menu > li > a .soap-icon-googleplus:hover {
+    color: #dc4a38;
+}
+#header .topnav ul.quick-menu > li > a .soap-icon-facebook:hover {
+    color: #3665c8;
+}
+#header .topnav ul.quick-menu > li > a .soap-icon-youtube:hover {
+    color: #ee1c1b;
+}
+#header .topnav ul.quick-menu > li > a .soap-icon-pinterest:hover {
+    color: #bd085a;
+}
+
+.img-principal-galeria .img-contenido img {
+    border-radius: 10px;
+    border: 2px solid #dcdcdc;
+    margin-bottom: 20px;
+}
+.interiores-exteriores .gal-img img {
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 2px 6px 0px #545454;
+}
+#footer label.title-form {
+    letter-spacing: 0;
+}
+#footer a.btn.btn-info-nosotros {
+    padding: 6px 20px;
+    background: #bd081b;
+}
+div#destinos-inicio .tab-pane h4 {
+    line-height: 1.5em;
+}
+#contenido-afiliarse .registrarse{
+    border-radius: 10px !important;
+}
+#contenido-afiliarse input.input-text, #contenido-afiliarse input.wpcf7-text, 
+#contenido-afiliarse select, #contenido-afiliarse textarea,
+#contenido-afiliarse  span.custom-select, #contenido-afiliarse input[type="password"] {
+    color: #2d2d2d !important;
+}
+span.hasta {
+    font-size: 1.2rem !important;
+    line-height: 4.5em  !important;
+    margin-top: 16px  !important;
+}
+
+.contact-details .contact-phone {
+    color: #fbb614;
+    font-size: 1.7em;
+    font-weight: bold !important;
+    TEXT-ALIGN: center !important;
+    margin: 0 auto;
+    display: block;
+}
+div#politicas-y-obligaciones li {
+    line-height: 1.5em !important;
+    text-align: justify !important;
+}
+div#politicas-y-obligaciones h3 {
+    font-size: 1.2rem;
+}
+div#politicas-y-obligaciones a {
+    font-weight: bold;
+}

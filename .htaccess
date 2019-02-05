@@ -1,0 +1,41 @@
+#RewriteBase /
+<files .htaccess>
+Order allow,deny
+Deny from all
+</files>
+RewriteEngine On 
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://dominio.com/$1 [R,L] 
+
+RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (libwww-perl|curl|wget|python|nikto|scan) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (<|>|’|%0A|%0D|%27|%3C|%3E|%00) [NC]
+RewriteRule .* - [F]
+
+RewriteEngine On
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+#personalizar errores de navegador
+ErrorDocument 404 error.php
+ErrorDocument 403 error.php
+ErrorDocument 500 error.php
+
+#solo controlador
+RewriteRule ^([a-zA-Z0-9_-]+)\/$ index.php?accion=$1 [S]
+#dos parámetros
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/*$ index.php?accion=$1&ide=$2 [S]
+#3 parámetros
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/*$ index.php?accion=$1&ide=$2&ide2=$3 [S]
+#4 parámetros
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/*$ index.php?accion=$1&ide=$2&ide2=$3&ide3=$4 [S]
+#5 parámetros
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/*$ index.php?accion=$1&ide=$2&ide2=$3&ide3=$4&ide4=$5 [S]
+#6 parámetros
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/*$ index.php?accion=$1&ide=$2&ide2=$3&ide3=$4&ide4=$5&ide5=$6 [S]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/.*$ index.php?accion=$1&ide=$2&ide2=$3&ide3=$4&ide4=$5&ide5=$6&ide6=$7&ide7=$8&ide8=$9 [L]

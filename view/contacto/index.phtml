@@ -1,0 +1,50 @@
+<html lang="es">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>Contacto - Autotransportes Unidos de Sinaloa</title>
+    <?php require_once("view/includes/script_header.phtml"); ?>
+</head>
+
+<body class="page page-id-682 page-child parent-pageid-571 page-template-default wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
+    <div id="page-wrapper">
+        <?php require_once("view/includes/header.phtml"); ?>
+        <div class="page-title-container">
+            <div class="container">
+                <div class="page-title pull-left">
+                    <h2 class="entry-title">
+				    Envíanos un mensaje			
+                    </h2>
+                </div>
+                <ul class="breadcrumbs pull-right">
+                    <li><a href="<?= Conectar::ruta_Web() ?>" title="Home">Inicio</a></li>
+                    <li class="active">Contacto</li>
+                </ul>
+            </div>
+        </div>
+        <section id="content" class="section-contacto">
+            <div class="container">
+                <div id="main" class="entry-content">
+                    <div class="vc_row wpb_row row">
+                        <div class="col-sm-12 ">
+                            <div class="block">
+                                <?php require_once("view/contacto/sucursales.phtml"); ?>
+                            </div>
+                            <div class="block">
+                                <?php require_once("view/contacto/datos.phtml"); ?>
+                            </div>
+                            <div class="travelo-box box-full">
+                                <?php require_once("view/contacto/formulario.phtml"); ?>
+                            </div>
+                            <div class="block">
+                                <?php require_once("view/contacto/mapa.phtml"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php require_once("view/includes/footer.phtml"); ?>
+    </div>
+    <?php require_once("view/includes/script_footer.phtml"); ?>
+</body>
+</html>

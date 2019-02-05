@@ -1,0 +1,1855 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<title>Travelo - Travel/Tour Booking WordPress Theme</title>
+
+<link rel="stylesheet" href="<?= Conectar::ruta_web()?>script/plugins/sitepress-multilingual-cms/res/css/language-selector9ea4.css" type="text/css" media="all" />
+
+	<!-- Meta Tags -->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="wp-content/uploads/2015/05/favicon.ico" type="image/x-icon" />
+		
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='<?= Conectar::ruta_web()?>script/plugins/contact-form-7/styles3a05.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='<?= Conectar::ruta_web()?>script/plugins/revslider/rs-plugin/css/settings1dc6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_font_googleapis-css'  href='http://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&amp;' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_animate-css'  href='<?= Conectar::ruta_web()?>script/css/animate.min9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_font_awesome-css'  href='<?= Conectar::ruta_web()?>script/css/font-awesome9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_bootstrap-css'  href='<?= Conectar::ruta_web()?>script/css/bootstrap.min9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_flexslider-css'  href='<?= Conectar::ruta_web()?>script/js/components/flexslider/flexslider9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_bxslider-css'  href='<?= Conectar::ruta_web()?>script/js/components/jquery.bxslider/jquery.bxslider9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_main_style-css'  href='<?= Conectar::ruta_web()?>script/css/style-light-blue9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trav_style_custom-css'  href='<?= Conectar::ruta_web()?>script/css/custom9712.css?ver=4.3.11' type='text/css' media='all' />
+<style id='trav_style_custom-inline-css' type='text/css'>
+
+			#header .logo a, #footer .bottom .logo a, .chaser .logo a, .logo-modal {
+				background-image: url(wp-content/themes/Travelo/images/logo.png);
+				background-repeat: no-repeat;
+				display: block;
+			}
+			.chaser .logo a {
+				background-size: auto 20px;
+			}
+</style>
+<link rel='stylesheet' id='trav_style_responsive-css'  href='<?= Conectar::ruta_web()?>script/css/responsive9712.css' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='<?= Conectar::ruta_web()?>script/plugins/js_composer/assets/css/js_composer.min5859.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mc4wp-form-basic-css'  href='<?= Conectar::ruta_web()?>script/plugins/mailchimp-for-wp/assets/css/form-basic.min1678.css' type='text/css' media='all' />
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery/jqueryc1d8.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery/jquery-migrate.min1576.js'></script>
+<link rel='shortlink' href='index.html' />
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				// CUSTOM AJAX CONTENT LOADING FUNCTION
+				var ajaxRevslider = function(obj) {
+				
+					// obj.type : Post Type
+					// obj.id : ID of Content to Load
+					// obj.aspectratio : The Aspect Ratio of the Container / Media
+					// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+					
+					var content = "";
+
+					data = {};
+					
+					data.action = 'revslider_ajax_call_front';
+					data.client_action = 'get_slider_html';
+					data.token = '86fb437efc';
+					data.type = obj.type;
+					data.id = obj.id;
+					data.aspectratio = obj.aspectratio;
+					
+					// SYNC AJAX REQUEST
+					jQuery.ajax({
+						type:"post",
+						url:"http://www.soaptheme.net/wordpress/travelo/wp-admin/admin-ajax.php?lang=en",
+						dataType: 'json',
+						data:data,
+						async:false,
+						success: function(ret, textStatus, XMLHttpRequest) {
+							if(ret.success == true)
+								content = ret.data;								
+						},
+						error: function(e) {
+							console.log(e);
+						}
+					});
+					
+					 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+					 return content;						 
+				};
+				
+				// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+				var ajaxRemoveRevslider = function(obj) {
+					return jQuery(obj.selector+" .rev_slider").revkill();
+				};
+
+				// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+				var extendessential = setInterval(function() {
+					if (jQuery.fn.tpessential != undefined) {
+						clearInterval(extendessential);
+						if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+							jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});   
+							// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+							// func: the Function Name which is Called once the Item with the Post Type has been clicked
+							// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+							// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+						}
+					}
+				},30);
+			});
+		</script>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1459450325173{padding-top: 80px !important;}.vc_custom_1459450367450{padding-bottom: 70px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="home page page-id-785 page-template page-template-templates page-template-template-home page-template-templatestemplate-home-php wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
+	<div id="page-wrapper">
+
+<header id="header" class="navbar-static-top">
+	<div class="topnav hidden-xs">
+		<div class="container">
+			<ul class="quick-menu pull-left">
+									<li><a href="#travelo-login" class="soap-popupbox">MY ACCOUNT</a></li>
+													<li class="ribbon">
+						<a href="#" title="">usd</a>
+						<ul class="menu mini">
+							<li class="active"><a href="indexa011.html?selected_currency=usd" title="United States Dollar">USD</a></li><li><a href="indexbcc0.html?selected_currency=eur" title="Euro">EUR</a></li><li><a href="indexa1b8.html?selected_currency=rub" title="Russian Ruble">RUB</a></li>						</ul>
+					</li>
+								
+					<li class="ribbon">
+						<a href="#">English</a><ul class="menu mini"><li class="active"><a href="http://www.soaptheme.net/wordpress/travelo" title="English">English</a></ul>					</li>
+
+							</ul>
+			<ul class="quick-menu pull-right">
+				<li>
+					<a href="https://themeforest.net/item/travelo-traveltour-booking-wordpress-theme/9806696?ref=SoapTheme" class="button yellow btn-small" style="height: 30px; font-size: 1em">
+						<i class="soap-icon-shopping"></i> Purchase
+					</a>
+				</li>
+									<li><a href="#travelo-login" class="soap-popupbox">LOGIN</a></li>
+												</ul>
+		</div>
+	</div>
+	<div id="main-header">
+
+		<div class="main-header">
+			<a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+				Mobile Menu Toggle
+			</a>
+
+			<div class="container">
+				<h1 class="logo navbar-brand">
+					<a href="http://www.soaptheme.net/wordpress/travelo">
+						<img src="<?= Conectar::ruta_web()?>script/images/logo.png" alt="Travelo &#8211; Travel/Tour Booking WordPress Theme" />
+					</a>
+				</h1>
+				<nav id="main-menu" class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-1108" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-785 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1108"><a href="index.html">Home</a>
+<ul class="sub-menu ">
+	<li id="menu-item-1105" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-785 current_page_item menu-item-1105"><a href="index.html">HomePage1</a></li>
+	<li id="menu-item-1104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1104"><a href="homepage2/index.html">HomePage2</a></li>
+	<li id="menu-item-1103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1103"><a href="homepage3/index.html">HomePage3</a></li>
+	<li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1102"><a href="homepage4/index.html">HomePage4</a></li>
+	<li id="menu-item-1101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1101"><a href="homepage5/index.html">HomePage5</a></li>
+	<li id="menu-item-1100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100"><a href="homepage6/index.html">HomePage6</a></li>
+	<li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099"><a href="homepage7/index.html">HomePage7</a></li>
+	<li id="menu-item-1098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1098"><a href="homepage8/index.html">HomePage8</a></li>
+	<li id="menu-item-1432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1432"><a href="homepage9/index.html">Homepage9</a></li>
+	<li id="menu-item-1431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1431"><a href="homepage10/index.html">Homepage10</a></li>
+	<li id="menu-item-1430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430"><a href="homepage11/index.html">Homepage11</a></li>
+	<li id="menu-item-1509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1509"><a href="homepage12/index.html">HomePage12</a></li>
+</ul>
+</li>
+<li id="menu-item-657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-657 megamenu-menu"><a href="#">Pages</a><div class="megamenu-wrapper colored container">
+<ul class="sub-menu megamenu">
+	<li id="menu-item-658" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-658"><a href="#">Standard Pages</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-771"><a href="#">mega-column</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767"><a href="standard-pages/layout-with-two-sidebar/index.html">Layout Two Sidebar</a></li>
+			<li id="menu-item-768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-768"><a href="standard-pages/layout-without-sidebar/index.html">Layout Full Width</a></li>
+			<li id="menu-item-769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-769"><a href="standard-pages/layout-right-sidebar/index.html">Layout Right Sidebar</a></li>
+			<li id="menu-item-770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-770"><a href="standard-pages/layout-left-sidebar/index.html">Layout Left Sidebar</a></li>
+		</ul>
+</li>
+		<li id="menu-item-669" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-669"><a href="#">mega-column-1</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-661"><a href="standard-pages/about-us/index.html">About Us 1</a></li>
+			<li id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662"><a href="standard-pages/about-us-2/index.html">About Us 2</a></li>
+			<li id="menu-item-663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="standard-pages/services/index.html">Services 1</a></li>
+			<li id="menu-item-664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664"><a href="standard-pages/services-2/index.html">Services 2</a></li>
+		</ul>
+</li>
+		<li id="menu-item-670" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-670"><a href="#">mege-column-2</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="blog/index.html">Blog Full Width</a></li>
+			<li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="blog-with-left-sidebar/index.html">Blog Left Sidebar</a></li>
+			<li id="menu-item-667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="blog-with-right-sidebar/index.html">Blog Right Sidebar</a></li>
+			<li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-668"><a href="standard-single-image-post/index.html">Blog Read</a></li>
+		</ul>
+</li>
+		<li id="menu-item-699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-699"><a href="#">mega-column-3</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><a href="standard-pages/contact-us/index.html">Contact Us</a></li>
+			<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="standard-pages/contact-us-2/index.html">Contact Us 2</a></li>
+			<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="standard-pages/contact-us-3/index.html">Contact Us 3</a></li>
+			<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="standard-pages/travelo-policies/index.html">Travelo Policies</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-659"><a href="#">Extra Pages</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-741" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-741"><a href="#">mega-column-4</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-1267" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-1267"><a href="location/france/index.html">Things To Do1</a></li>
+			<li id="menu-item-1268" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-1268"><a href="location/paris/index.html">Things To Do2</a></li>
+			<li id="menu-item-1310" class="menu-item menu-item-type-post_type menu-item-object-travel_guide menu-item-1310"><a href="travel-guide/travel-guide-to-paris/index.html">Travel Guide To Paris</a></li>
+		</ul>
+</li>
+		<li id="menu-item-1313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1313"><a href="#">mega-column-5</a>
+		<ul class="sub-menu ">
+			<li id="menu-item-1311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1311"><a href="#">Hot Deals – Coming Soon</a></li>
+			<li id="menu-item-1312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1312"><a href="#">Travel Stories – Coming Soon</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-1314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1314"><a href="#">Special Pages</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315"><a href="login/index.html">LogIn Page</a></li>
+		<li id="menu-item-1319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1319"><a href="partner-signup-page/index.html">Partner SignUp Page</a></li>
+		<li id="menu-item-1316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1316"><a href="404.html">404 Page</a></li>
+	</ul>
+</li>
+</ul>
+</div></li>
+<li id="menu-item-1269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1269"><a href="home/index.html">Hotels</a>
+<ul class="sub-menu ">
+	<li id="menu-item-1436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1436"><a href="home/index.html">Hotel Home Page</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="home/index.html">Hotel Home 1</a></li>
+		<li id="menu-item-1427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1427"><a href="hotel-home2/index.html">Hotel Home2</a></li>
+		<li id="menu-item-1426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1426"><a href="hotel-home3/index.html">Hotel Home3</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1297"><a href="indexd335.html?post_type=accommodation&amp;s=">Search Hotels</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1444"><a href="index16d3.html?post_type=accommodation&amp;s&amp;view=list">List View</a></li>
+		<li id="menu-item-1442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1442"><a href="indexeaef.html?post_type=accommodation&amp;s&amp;view=grid">Grid View</a></li>
+		<li id="menu-item-1443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1443"><a href="indexbb2f.html?post_type=accommodation&amp;s&amp;view=block">Block View</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1439" class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-has-children menu-item-1439"><a href="accommodation/hilton-hotel-and-resorts/index.html">Single Hotel Page</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1299" class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1299"><a href="accommodation/hilton-hotel-and-resorts/index.html">Hotel A (without payment)</a></li>
+		<li id="menu-item-1300" class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1300"><a href="accommodation/hotel-alpina/index.html">Hotel B (with full payment)</a></li>
+		<li id="menu-item-1301" class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1301"><a href="accommodation/ruzzini-palace-hotel/index.html">Hotel C (with part payment)</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1437"><a href="shortcodes/listing-style1/index.html">Hotels List</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1320"><a href="shortcodes/listing-style1/index.html">Hotel Listing Style 1</a></li>
+		<li id="menu-item-1321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1321"><a href="shortcodes/listing-style-2/index.html">Hotel Listing Style 2</a></li>
+		<li id="menu-item-1322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322"><a href="shortcodes/listing-style-3/index.html">Hotel Listing Style 3</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1271"><a href="tour-home/index.html">Tours</a>
+<ul class="sub-menu ">
+	<li id="menu-item-1435" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1435"><a href="tour-home/index.html">Tour Home Page</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a href="tour-home/index.html">Tour Home 1</a></li>
+		<li id="menu-item-1429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429"><a href="tour-home2/index.html">Tour Home 2</a></li>
+		<li id="menu-item-1428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1428"><a href="tour-home3/index.html">Tour Home 3</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1298"><a href="index3dbe.html?post_type=tour&amp;s=">Search Tours</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1445"><a href="indexd500.html?post_type=tour&amp;s&amp;view=grid">Grid View</a></li>
+		<li id="menu-item-1446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1446"><a href="index9cf2.html?post_type=tour&amp;s&amp;view=list">List View</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1438" class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-has-children menu-item-1438"><a href="tour/florence-day/index.html">Single Tour Page</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1302" class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1302"><a href="tour/florence-day/index.html">Tour A (without variation)</a></li>
+		<li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1303"><a href="tour/tour-colosseum/index.html">Tour B (with day variation)</a></li>
+		<li id="menu-item-1304" class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1304"><a href="tour/rome-city-tour/index.html">Tour C (with full variation)</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1433"><a href="fancy-package-2-columns/index.html">Tours List</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1291"><a href="fancy-package-2-columns/index.html">Fancy Package &#8211; 2 Columns</a></li>
+		<li id="menu-item-1292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1292"><a href="fancy-package-3-columns/index.html">Fancy Package &#8211; 3 Columns</a></li>
+		<li id="menu-item-1293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1293"><a href="fancy-package-4-columns/index.html">Fancy Package &#8211; 4 Columns</a></li>
+		<li id="menu-item-1296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="package-2-columns/index.html">Simple Package &#8211; 2 Columns</a></li>
+		<li id="menu-item-1294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1294"><a href="package-3-columns/index.html">Simple Package &#8211; 3 Columns</a></li>
+		<li id="menu-item-1295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1295"><a href="package-4-columns/index.html">Simple Package &#8211; 4 Columns</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-travel_guide menu-item-1305"><a href="travel-guide/travel-guide-to-paris/index.html">Travel Guide</a></li>
+<li id="menu-item-1273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1273"><a href="#">Shortcodes</a>
+<ul class="sub-menu ">
+	<li id="menu-item-1275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1275"><a href="shortcodes/accordion-toggles/index.html">Accordion &#038; Toggles</a></li>
+	<li id="menu-item-1277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277"><a href="shortcodes/buttons/index.html">Buttons &#038; Links</a></li>
+	<li id="menu-item-1278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278"><a href="shortcodes/travelo-icon-box-styles/index.html">Icon Box Styles</a></li>
+	<li id="menu-item-1279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1279"><a href="shortcodes/image-gallery-styles/index.html">Image &#038; Gallery Styles</a></li>
+	<li id="menu-item-1280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1280"><a href="shortcodes/image-box-styles/index.html">Image Box Styles</a></li>
+	<li id="menu-item-1288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1288"><a href="#">Listing Styles</a>
+	<ul class="sub-menu ">
+		<li id="menu-item-1281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1281"><a href="shortcodes/listing-style1/index.html">Listing Style 1</a></li>
+		<li id="menu-item-1282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1282"><a href="shortcodes/listing-style-2/index.html">Listing Style 2</a></li>
+		<li id="menu-item-1283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1283"><a href="shortcodes/listing-style-3/index.html">Listing Style 3</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1284"><a href="shortcodes/people/index.html">Our Team</a></li>
+	<li id="menu-item-1285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1285"><a href="shortcodes/pricing-tables/index.html">Pricing Tables</a></li>
+	<li id="menu-item-1286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1286"><a href="shortcodes/tabs/index.html">Tabs</a></li>
+	<li id="menu-item-1287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1287"><a href="shortcodes/testimonials/index.html">Testimonials</a></li>
+	<li id="menu-item-1289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1289"><a href="shortcodes/typography/index.html">Typography</a></li>
+	<li id="menu-item-1290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="shortcodes/icon-pack/index.html">Travelo Icon Pack</a></li>
+	<li id="menu-item-1276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"><a href="shortcodes/animations/index.html">Animations</a></li>
+</ul>
+</li>
+<li id="menu-item-1306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1306"><a href="#">Coming Soon</a>
+<ul class="sub-menu ">
+	<li id="menu-item-1307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1307"><a href="http://www.soaptheme.net/html/travelo/flight-index.html">Flights</a></li>
+	<li id="menu-item-1308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1308"><a href="http://www.soaptheme.net/html/travelo/car-index.html">Cars</a></li>
+	<li id="menu-item-1309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1309"><a href="http://www.soaptheme.net/html/travelo/cruise-index.html">Cruises</a></li>
+</ul>
+</li>
+</ul></nav>			</div><!-- .container -->
+
+		</div><!-- .main-header -->
+	</div><!-- #main-header -->
+<!-- mobile menu -->
+<nav id="mobile-menu-01" class="mobile-menu collapse"><ul id="mobile-primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-785 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1108"><a href="index.html">Home</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-785 current_page_item menu-item-1105"><a href="index.html">HomePage1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1104"><a href="homepage2/index.html">HomePage2</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1103"><a href="homepage3/index.html">HomePage3</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1102"><a href="homepage4/index.html">HomePage4</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1101"><a href="homepage5/index.html">HomePage5</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100"><a href="homepage6/index.html">HomePage6</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099"><a href="homepage7/index.html">HomePage7</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1098"><a href="homepage8/index.html">HomePage8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1432"><a href="homepage9/index.html">Homepage9</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1431"><a href="homepage10/index.html">Homepage10</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430"><a href="homepage11/index.html">Homepage11</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1509"><a href="homepage12/index.html">HomePage12</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-657"><a href="#">Pages</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-658"><a href="#">Standard Pages</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-771"><a href="#">mega-column</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767"><a href="standard-pages/layout-with-two-sidebar/index.html">Layout Two Sidebar</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-768"><a href="standard-pages/layout-without-sidebar/index.html">Layout Full Width</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-769"><a href="standard-pages/layout-right-sidebar/index.html">Layout Right Sidebar</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-770"><a href="standard-pages/layout-left-sidebar/index.html">Layout Left Sidebar</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-669"><a href="#">mega-column-1</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-661"><a href="standard-pages/about-us/index.html">About Us 1</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662"><a href="standard-pages/about-us-2/index.html">About Us 2</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="standard-pages/services/index.html">Services 1</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664"><a href="standard-pages/services-2/index.html">Services 2</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-670"><a href="#">mege-column-2</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="blog/index.html">Blog Full Width</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="blog-with-left-sidebar/index.html">Blog Left Sidebar</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="blog-with-right-sidebar/index.html">Blog Right Sidebar</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-668"><a href="standard-single-image-post/index.html">Blog Read</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-699"><a href="#">mega-column-3</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><a href="standard-pages/contact-us/index.html">Contact Us</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="standard-pages/contact-us-2/index.html">Contact Us 2</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="standard-pages/contact-us-3/index.html">Contact Us 3</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="standard-pages/travelo-policies/index.html">Travelo Policies</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-659"><a href="#">Extra Pages</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-741"><a href="#">mega-column-4</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-1267"><a href="location/france/index.html">Things To Do1</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-1268"><a href="location/paris/index.html">Things To Do2</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-travel_guide menu-item-1310"><a href="travel-guide/travel-guide-to-paris/index.html">Travel Guide To Paris</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1313"><a href="#">mega-column-5</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1311"><a href="#">Hot Deals – Coming Soon</a></li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1312"><a href="#">Travel Stories – Coming Soon</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1314"><a href="#">Special Pages</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315"><a href="login/index.html">LogIn Page</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1319"><a href="partner-signup-page/index.html">Partner SignUp Page</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1316"><a href="404.html">404 Page</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1269"><a href="home/index.html">Hotels</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1436"><a href="home/index.html">Hotel Home Page</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"><a href="home/index.html">Hotel Home 1</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1427"><a href="hotel-home2/index.html">Hotel Home2</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1426"><a href="hotel-home3/index.html">Hotel Home3</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1297"><a href="indexd335.html?post_type=accommodation&amp;s=">Search Hotels</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1444"><a href="index16d3.html?post_type=accommodation&amp;s&amp;view=list">List View</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1442"><a href="indexeaef.html?post_type=accommodation&amp;s&amp;view=grid">Grid View</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1443"><a href="indexbb2f.html?post_type=accommodation&amp;s&amp;view=block">Block View</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-has-children menu-item-1439"><a href="accommodation/hilton-hotel-and-resorts/index.html">Single Hotel Page</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1299"><a href="accommodation/hilton-hotel-and-resorts/index.html">Hotel A (without payment)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1300"><a href="accommodation/hotel-alpina/index.html">Hotel B (with full payment)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-accommodation menu-item-1301"><a href="accommodation/ruzzini-palace-hotel/index.html">Hotel C (with part payment)</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1437"><a href="shortcodes/listing-style1/index.html">Hotels List</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1320"><a href="shortcodes/listing-style1/index.html">Hotel Listing Style 1</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1321"><a href="shortcodes/listing-style-2/index.html">Hotel Listing Style 2</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322"><a href="shortcodes/listing-style-3/index.html">Hotel Listing Style 3</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1271"><a href="tour-home/index.html">Tours</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1435"><a href="tour-home/index.html">Tour Home Page</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a href="tour-home/index.html">Tour Home 1</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429"><a href="tour-home2/index.html">Tour Home 2</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1428"><a href="tour-home3/index.html">Tour Home 3</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1298"><a href="index3dbe.html?post_type=tour&amp;s=">Search Tours</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1445"><a href="indexd500.html?post_type=tour&amp;s&amp;view=grid">Grid View</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1446"><a href="index9cf2.html?post_type=tour&amp;s&amp;view=list">List View</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-has-children menu-item-1438"><a href="tour/florence-day/index.html">Single Tour Page</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1302"><a href="tour/florence-day/index.html">Tour A (without variation)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1303"><a href="tour/tour-colosseum/index.html">Tour B (with day variation)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-tour menu-item-1304"><a href="tour/rome-city-tour/index.html">Tour C (with full variation)</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1433"><a href="fancy-package-2-columns/index.html">Tours List</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1291"><a href="fancy-package-2-columns/index.html">Fancy Package &#8211; 2 Columns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1292"><a href="fancy-package-3-columns/index.html">Fancy Package &#8211; 3 Columns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1293"><a href="fancy-package-4-columns/index.html">Fancy Package &#8211; 4 Columns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="package-2-columns/index.html">Simple Package &#8211; 2 Columns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1294"><a href="package-3-columns/index.html">Simple Package &#8211; 3 Columns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1295"><a href="package-4-columns/index.html">Simple Package &#8211; 4 Columns</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-travel_guide menu-item-1305"><a href="travel-guide/travel-guide-to-paris/index.html">Travel Guide</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1273"><a href="#">Shortcodes</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1275"><a href="shortcodes/accordion-toggles/index.html">Accordion &#038; Toggles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277"><a href="shortcodes/buttons/index.html">Buttons &#038; Links</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278"><a href="shortcodes/travelo-icon-box-styles/index.html">Icon Box Styles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1279"><a href="shortcodes/image-gallery-styles/index.html">Image &#038; Gallery Styles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1280"><a href="shortcodes/image-box-styles/index.html">Image Box Styles</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1288"><a href="#">Listing Styles</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1281"><a href="shortcodes/listing-style1/index.html">Listing Style 1</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1282"><a href="shortcodes/listing-style-2/index.html">Listing Style 2</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1283"><a href="shortcodes/listing-style-3/index.html">Listing Style 3</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1284"><a href="shortcodes/people/index.html">Our Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1285"><a href="shortcodes/pricing-tables/index.html">Pricing Tables</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1286"><a href="shortcodes/tabs/index.html">Tabs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1287"><a href="shortcodes/testimonials/index.html">Testimonials</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1289"><a href="shortcodes/typography/index.html">Typography</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="shortcodes/icon-pack/index.html">Travelo Icon Pack</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"><a href="shortcodes/animations/index.html">Animations</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1306"><a href="#">Coming Soon</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1307"><a href="http://www.soaptheme.net/html/travelo/flight-index.html">Flights</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1308"><a href="http://www.soaptheme.net/html/travelo/car-index.html">Cars</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1309"><a href="http://www.soaptheme.net/html/travelo/cruise-index.html">Cruises</a></li>
+</ul>
+</li>
+</ul><ul class="mobile-topnav container"><li><a href="#travelo-login" class="soap-popupbox">MY ACCOUNT</a></li><li><a href="#travelo-login" class="soap-popupbox">LOGIN</a></li><li class="ribbon currency menu-color-skin"><a href="#" title="usd">usd</a><ul class="menu mini"><li class="active"><a href="indexa011.html?selected_currency=usd" title="United States Dollar">USD</a></li><li><a href="indexbcc0.html?selected_currency=eur" title="Euro">EUR</a></li><li><a href="indexa1b8.html?selected_currency=rub" title="Russian Ruble">RUB</a></li></ul></li><li class="ribbon menu-color-skin"><a href="#">English</a><ul class="menu mini"><li class="active"><a href="http://www.soaptheme.net/wordpress/travelo" title="English">English</a></ul></li><li><a href="https://themeforest.net/item/travelo-traveltour-booking-wordpress-theme/9806696?ref=SoapTheme" style="font-size: 1em;background: #e9b02b !important; margin: 10px; padding: 12px 20px; text-transform: uppercase; opacity:1"><i class="soap-icon-shopping"></i> Purchase</a></li></ul></nav><!-- mobile menu -->
+</header>
+
+	<div id="travelo-login" class="travelo-modal-box travelo-box">
+		<div>
+			<a href="#" class="logo-modal">Travelo &#8211; Travel/Tour Booking WordPress Theme<img src="<?= Conectar::ruta_web()?>script/images/logo.png" alt="Travelo &#8211; Travel/Tour Booking WordPress Theme"></a>
+		</div>
+		<form name="loginform" action="http://www.soaptheme.net/wordpress/travelo/wp-login.php" method="post">
+			<div class="form-group">
+				<input type="text" name="log" tabindex="1" class="input-text full-width" placeholder="user name">
+			</div>
+			<div class="form-group">
+				<input type="password" name="pwd" tabindex="2" class="input-text full-width" placeholder="password">
+			</div>
+			<div class="form-group">
+				<a href="wp-loginc2b6.html?action=lostpassword" class="forgot-password pull-right">Forgot password?</a>
+				<div class="checkbox checkbox-inline">
+					<label>
+						<input type="checkbox" name="rememberme" tabindex="3" value="forever"> Remember me					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<button tabindex="4" class="button btn-medium btn-login full-width">LOG IN</button>
+			</div>
+			<input type="hidden" name="redirect_to" value="http://www.soaptheme.net/wordpress/travelo">
+		</form>
+			</div>
+<div id="slideshow">
+<div id="rev_slider_6_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:646px;">
+<!-- START REVOLUTION SLIDER 4.6.5 fullwidth mode -->
+	<div id="rev_slider_6_1" class="rev_slider fullwidthabanner" style="display:none;max-height:646px;height:646px;">
+<ul>	<!-- SLIDE  -->
+	<li data-transition="fade" data-slotamount="7" data-masterspeed="1000"  data-saveperformance="off" >
+		<!-- MAIN IMAGE -->
+		<img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/bg.jpg"  alt="bg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption lfb fadeout" 
+			 data-x="center" data-hoffset="0" 
+			 data-y="bottom" data-voffset="0" 
+			data-speed="300" 
+			data-start="400" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 5;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/stage.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption tp-fade fadeout" 
+			 data-x="center" data-hoffset="0" 
+			 data-y="bottom" data-voffset="0" 
+			data-speed="300" 
+			data-start="800" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 6;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/tree.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption lfl str" 
+			 data-x="756" 
+			 data-y="500"  
+			data-speed="1500" 
+			data-start="1100" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 7;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/shadow.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption sfr stl" 
+			 data-x="801" 
+			 data-y="319"  
+			data-speed="1500" 
+			data-start="1400" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 8;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/brifcase.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption sfr stl" 
+			 data-x="718" 
+			 data-y="357"  
+			data-speed="1500" 
+			data-start="1700" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 9;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/plate.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption sfr stb" 
+			 data-x="798" 
+			 data-y="450"  
+			data-speed="1500" 
+			data-start="2000" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 10;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/watch.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption sfr stl" 
+			 data-x="773" 
+			 data-y="315"  
+			data-speed="1500" 
+			data-start="2300" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 11;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/cap.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption customin fadeout" 
+			 data-x="center" data-hoffset="320" 
+			 data-y="160"  
+			data-customin="x:800;y:450;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:846;transformOrigin:50% 50%;" 
+			data-speed="1000" 
+			data-start="3000" 
+			data-easing="easeOutQuad" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 12;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/plane.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption sft stt tp-resizeme" 
+			 data-x="250" 
+			 data-y="center" data-voffset="40" 
+			data-speed="600" 
+			data-start="3600" 
+			data-easing="easeOutQuad" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;"><p class="caption-small-title">Welcome to World’s No. 1</p>
+<p class="caption-medium-title">Travel Based Theme Ever Created!</p> 
+		</div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption largewhitebg_button1 lfl stl tp-resizeme" 
+			 data-x="310" 
+			 data-y="395"  
+			data-speed="1500" 
+			data-start="3200" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 14; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#">BUY NOW</a> 
+		</div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption largewhitebg_button1 lfr str tp-resizeme" 
+			 data-x="444" 
+			 data-y="395"  
+			data-speed="1500" 
+			data-start="3500" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 15; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#">MORE INFO</a> 
+		</div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000"  data-saveperformance="off" >
+		<!-- MAIN IMAGE -->
+		<img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/bg1.jpg"  alt="bg1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption lfl str" 
+			 data-x="576" 
+			 data-y="16"  
+			data-speed="1500" 
+			data-start="500" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 5;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/girl.png" alt="" data-ww="650" data-hh="637"> 
+		</div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption lfr stl" 
+			 data-x="27" 
+			 data-y="359"  
+			data-speed="1500" 
+			data-start="800" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 6;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/island.png" alt="" data-ww="267" data-hh="187"> 
+		</div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption lfb stt" 
+			 data-x="266" 
+			 data-y="479"  
+			data-speed="1500" 
+			data-start="1100" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 7;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/ballon.png" alt="" data-ww="25"> 
+		</div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption lfl stt" 
+			 data-x="384" 
+			 data-y="441"  
+			data-speed="1500" 
+			data-start="1400" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 8;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/plane1.png" alt="" data-ww="262" data-hh="100"> 
+		</div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption large_bold_white_med_2 lfb str tp-resizeme" 
+			 data-x="25" 
+			 data-y="181"  
+			data-speed="1500" 
+			data-start="1700" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><p class="caption-big-title">Let's <strong><i>Discover</i></strong> the world together!</p> 
+		</div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption lft stl" 
+			 data-x="22" 
+			 data-y="230"  
+			data-speed="1500" 
+			data-start="2000" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 10;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/pleane.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption sfl stl" 
+			 data-x="23" 
+			 data-y="273"  
+			data-speed="1500" 
+			data-start="2300" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6700" 
+ data-endspeed="1300" 
+
+			style="z-index: 11;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/buil.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption sfl stt" 
+			 data-x="18" 
+			 data-y="317"  
+			data-speed="1500" 
+			data-start="2600" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 12;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/watch1.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption sfl stl" 
+			 data-x="18" 
+			 data-y="354"  
+			data-speed="1500" 
+			data-start="2900" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 13;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/man.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption large_bold_white_med lft str tp-resizeme" 
+			 data-x="72" 
+			 data-y="230"  
+			data-speed="1500" 
+			data-start="3200" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 14; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Over<strong> 500 </strong>Airlines</span> 
+		</div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption large_bold_white_med lft stl tp-resizeme" 
+			 data-x="73" 
+			 data-y="274"  
+			data-speed="1500" 
+			data-start="3500" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6500" 
+ data-endspeed="1500" 
+
+			style="z-index: 15; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">More than <strong>13,000</strong> Places</span> 
+		</div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption large_bold_white_med lft stt tp-resizeme" 
+			 data-x="73" 
+			 data-y="318"  
+			data-speed="1500" 
+			data-start="3800" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 16; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Best Price Guarantee</span> 
+		</div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption large_bold_white_med lft stl tp-resizeme" 
+			 data-x="75" 
+			 data-y="357"  
+			data-speed="1500" 
+			data-start="4100" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 17; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Customer Care</span> 
+		</div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption tp-fade fadeout tp-resizeme" 
+			 data-x="29" 
+			 data-y="410"  
+			data-speed="1500" 
+			data-start="4400" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="6700" 
+ data-endspeed="1300" 
+
+			style="z-index: 18; max-width: auto; max-height: auto; white-space: nowrap;"><a class="link link-home-slider-blue" href="#">FINE OUT MORE</a> 
+		</div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-transition="slidedown" data-slotamount="7" data-masterspeed="1500"  data-saveperformance="off" >
+		<!-- MAIN IMAGE -->
+		<img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/bg2.jpg"  alt="bg2"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption lfr fadeout" 
+			 data-x="right" data-hoffset="10" 
+			 data-y="center" data-voffset="0" 
+			data-speed="400" 
+			data-start="1000" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 5;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/cloud.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption sfb fadeout" 
+			 data-x="right" data-hoffset="-307" 
+			 data-y="134"  
+			data-speed="400" 
+			data-start="1700" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 6;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/balloon.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption customin fadeout" 
+			 data-x="center" data-hoffset="24" 
+			 data-y="139"  
+			data-customin="x:800;y:450;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:846;transformOrigin:50% 50%;" 
+			data-speed="300" 
+			data-start="2100" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 7;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/plane2.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-486" 
+			 data-y="116"  
+			data-speed="300" 
+			data-start="3900" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 8;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/italy.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-437" 
+			 data-y="117"  
+			data-speed="300" 
+			data-start="3700" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 9;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/building5.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-498" 
+			 data-y="201"  
+			data-speed="300" 
+			data-start="3500" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 10;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/building4.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-381" 
+			 data-y="134"  
+			data-speed="300" 
+			data-start="3300" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 11;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/building3.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-367" 
+			 data-y="152"  
+			data-speed="300" 
+			data-start="3100" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 12;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/building2.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-365" 
+			 data-y="98"  
+			data-speed="300" 
+			data-start="2900" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 13;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/paris.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-342" 
+			 data-y="183"  
+			data-speed="300" 
+			data-start="2700" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 14;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/sydney.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-481" 
+			 data-y="178"  
+			data-speed="300" 
+			data-start="2500" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 15;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/building.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-413" 
+			 data-y="30"  
+			data-speed="300" 
+			data-start="2300" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 16;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/london.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="right" data-hoffset="-440" 
+			 data-y="72"  
+			data-speed="300" 
+			data-start="2100" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 17;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/newyork.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption customin fadeout" 
+			 data-x="right" data-hoffset="60" 
+			 data-y="bottom" data-voffset="0" 
+			data-customin="x:800;y:450;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:846;transformOrigin:50% 50%;" 
+			data-speed="600" 
+			data-start="1600" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 18;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/hand.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption large_bold_white_med lfr stl tp-resizeme" 
+			 data-x="25" 
+			 data-y="181"  
+			data-speed="1500" 
+			data-start="4000" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7700" 
+ data-endspeed="300" 
+
+			style="z-index: 19; max-width: auto; max-height: auto; white-space: nowrap;"><p class="caption-big-title">Let's <strong><i>Discover</i></strong> the world together!</p> 
+		</div>
+
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="22" 
+			 data-y="230"  
+			data-speed="1500" 
+			data-start="4200" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 20;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/pleane.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 17 -->
+		<div class="tp-caption large_bold_white_med sfb stb tp-resizeme" 
+			 data-x="72" 
+			 data-y="230"  
+			data-speed="1500" 
+			data-start="4400" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 21; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Over<strong> 500 </strong>Airlines</span> 
+		</div>
+
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption sfb stb" 
+			 data-x="23" 
+			 data-y="273"  
+			data-speed="1500" 
+			data-start="4600" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 22;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/buil.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption large_bold_white_med lft stl tp-resizeme" 
+			 data-x="73" 
+			 data-y="274"  
+			data-speed="1500" 
+			data-start="4700" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 23; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">More than <strong>13,000</strong> Places</span> 
+		</div>
+
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption sfl stt" 
+			 data-x="18" 
+			 data-y="317"  
+			data-speed="1500" 
+			data-start="4900" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 24;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/watch1.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption large_bold_white_med lft stt tp-resizeme" 
+			 data-x="73" 
+			 data-y="318"  
+			data-speed="1500" 
+			data-start="5100" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 25; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Best Price Guarantee</span> 
+		</div>
+
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption sfl stl" 
+			 data-x="18" 
+			 data-y="354"  
+			data-speed="1500" 
+			data-start="5300" 
+			data-easing="Power3.easeInOut" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 26;"><img src="<?= Conectar::ruta_web()?>script/images/revslider1/homepage/man.png" alt=""> 
+		</div>
+
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption large_bold_white_med lft stl tp-resizeme" 
+			 data-x="75" 
+			 data-y="357"  
+			data-speed="1500" 
+			data-start="5500" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7400" 
+ data-endspeed="600" 
+
+			style="z-index: 27; max-width: auto; max-height: auto; white-space: nowrap;"><span class="caption-medium-title">Customer Care</span> 
+		</div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption tp-fade fadeout tp-resizeme" 
+			 data-x="29" 
+			 data-y="410"  
+			data-speed="1500" 
+			data-start="5700" 
+			data-easing="Power3.easeInOut" 
+			data-splitin="none" 
+			data-splitout="none" 
+			data-elementdelay="0.1" 
+			data-endelementdelay="0.1" 
+			 data-end="7000" 
+ data-endspeed="1000" 
+
+			style="z-index: 28; max-width: auto; max-height: auto; white-space: nowrap;"><a class="link link-home-slider-blue" href="#">FINE OUT MORE</a> 
+		</div>
+	</li>
+</ul>
+<div class="tp-bannertimer"></div>	</div>
+</div><!-- END REVOLUTION SLIDER --></div>		<section id="content" class="no-padding">
+			<div class="search-box-wrapper">
+				<div class="search-box container">
+											<ul class="search-tabs clearfix">
+															<li class="active" ><a href="#hotels-tab" data-toggle="tab">HOTELS</a></li>
+																						<li  ><a href="#tours-tab" data-toggle="tab">TOURS</a></li>
+													</ul>
+						<div class="visible-mobile">
+							<ul id="mobile-search-tabs" class="search-tabs clearfix">
+																	<li class="active" ><a href="#hotels-tab" data-toggle="tab">HOTELS</a></li>
+																									<li  ><a href="#tours-tab" data-toggle="tab">TOURS</a></li>
+															</ul>
+						</div>
+										<div class="search-tab-content">
+																					<div class="tab-pane fade active in" id="hotels-tab">
+														<form role="search" method="get" id="searchform" class="acc-searchform" action="http://www.soaptheme.net/wordpress/travelo/">
+								<input type="hidden" name="post_type" value="accommodation">
+								<div class="row">
+									<div class="form-group col-sm-6 col-md-3">
+										<h4 class="title">Where</h4>
+										<label>Your Destination</label>
+										<input type="text" name="s" class="input-text full-width" placeholder="Enter a destination or hotel name" />
+									</div>
+
+									<div class="form-group col-sm-6 col-md-4">
+										<h4 class="title">When</h4>
+										<div class="row search-when" data-error-message1="Your check-out date is before your check-in date. Have another look at your date and try again." data-error-message2="Please select current or future dates for check-in and check-out.">
+											<div class="col-xs-6">
+												<label>CHECK IN</label>
+												<div class="datepicker-wrap from-today">
+													<input name="date_from" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+												</div>
+											</div>
+											<div class="col-xs-6">
+												<label>CHECK OUT</label>
+												<div class="datepicker-wrap from-today">
+													<input name="date_to" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-6 col-md-3">
+										<h4 class="title">Who</h4>
+										<div class="row">
+											<div class="col-xs-4">
+												<label>Rooms</label>
+												<div class="selector">
+													<select name="rooms" class="full-width">
+														<option value="1" selected>1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option><option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option><option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option><option value="21" >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option><option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option>													</select>
+												</div>
+											</div>
+											<div class="col-xs-4">
+												<label>Adults</label>
+												<div class="selector">
+													<select name="adults" class="full-width">
+														<option value="1" selected>1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option><option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option><option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option><option value="21" >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option><option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option>													</select>
+												</div>
+											</div>
+											<div class="col-xs-4">
+												<label>Kids</label>
+												<div class="selector">
+													<select name="kids" class="full-width">
+														<option value="0" selected>0</option><option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option>													</select>
+												</div>
+											</div>
+										</div>
+										<div class="age-of-children no-display">
+											<h5>Age of Children</h5>
+											<div class="row">
+												<div class="col-xs-4 child-age-field">
+													<label>Child 1</label>
+													<div class="selector validation-field">
+														<select name="child_ages[]" class="full-width">
+															<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-6 col-md-2 fixheight">
+										<label class="hidden-xs">&nbsp;</label>
+										<button type="submit" class="full-width icon-check animated" data-animation-type="bounce" data-animation-duration="1">SEARCH NOW</button>
+									</div>
+								</div>
+							</form>
+															</div>
+													
+																					<div class="tab-pane fade" id="tours-tab">
+														<form role="search" method="get" id="searchform" class="tour-searchform" action="http://www.soaptheme.net/wordpress/travelo/">
+								<input type="hidden" name="post_type" value="tour">
+								<div class="row">
+									<div class="form-group col-sm-4 col-md-3">
+										<h4 class="title">Where</h4>
+										<label>Destination </label>
+										<input type="text" name="s" class="input-text full-width" placeholder="Enter a destination or tour name" />
+									</div>
+									<div class="form-group col-sm-8 col-md-4">
+										<h4 class="title">When</h4>
+										<div class="row">
+											<div class="col-xs-6">
+												<label>From</label>
+												<div class="datepicker-wrap from-today">
+													<input name="date_from" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+												</div>
+											</div>
+											<div class="col-xs-6">
+												<label>To</label>
+												<div class="datepicker-wrap from-today">
+													<input name="date_to" type="text" class="input-text full-width" placeholder="mm/dd/yy" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-sm-6 col-md-3 fixheight">
+																				<div class="row">
+																							<div class="col-xs-6">
+													<label>Trip Type</label>
+													<div class="selector">
+														<select name="tour_types" class="full-width">
+															<option value="">Trip Type</option>
+																															<option value="47">City Tour</option>
+																															<option value="48">Cultural</option>
+																															<option value="50">Honeymoon</option>
+																													</select>
+													</div>
+												</div>
+																						<div class="col-xs-6">
+												<label>Budget</label>
+												<input type="text" name="max_price" class="input-text full-width" placeholder="Max Budget (usd)" />
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-sm-6 col-md-2 fixheight">
+										<label class="hidden-xs">&nbsp;</label>
+										<button type="submit" class="full-width icon-check animated" data-animation-type="bounce" data-animation-duration="1">SEARCH NOW</button>
+									</div>
+								</div>
+							</form>
+															</div>
+																		</div>
+				</div>
+			</div>
+			<div class="entry-content">
+				<div class="vc_row wpb_row row">
+	<div class="col-sm-12 ">
+			<div class="vc_row wpb_row vc_inner vc_row-fluid section destinations inner-container"><div class="container"><div class="row"><div class="wpb_column col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h2>Popular Hotels</h2><div class="row hotel image-box listing-style2"><div class='col-sm-6 col-sms-6 col-md-3'>			<article class="box">
+				<figure >
+					<a href="#" data-post_id="45" class="hover-effect popup-gallery"><img width="500" height="300" src="<?= Conectar::ruta_web() ?>script/images/extra/4-500x300.jpg" class="attachment-biggallery-thumb wp-post-image" alt="4" /></a>
+									</figure>
+				<div class="details">
+											<a title="View all" href="accommodation/hilton-hotel-and-resorts/index.html" class="pull-right button uppercase">select</a>
+						<h4 class="box-title"><a href="accommodation/hilton-hotel-and-resorts/index.html">Hilton Hotel</a></h4>
+													<label class="price-wrapper">
+								<span class="price-per-unit">$120.00</span>avg/night							</label>
+										</div>
+			</article>
+
+		</div><div class='col-sm-6 col-sms-6 col-md-3'>			<article class="box">
+				<figure >
+					<a href="#" data-post_id="1145" class="hover-effect popup-gallery"><img width="500" height="300" src="<?= Conectar::ruta_web() ?>script/images/extra/5-500x300.jpg" class="attachment-biggallery-thumb wp-post-image" alt="5" /></a>
+									</figure>
+				<div class="details">
+											<a title="View all" href="accommodation/hotel-alpina/index.html" class="pull-right button uppercase">select</a>
+						<h4 class="box-title"><a href="accommodation/hotel-alpina/index.html">Hôtel Alpina</a></h4>
+													<label class="price-wrapper">
+								<span class="price-per-unit">$120.00</span>avg/night							</label>
+										</div>
+			</article>
+
+		</div><div class='col-sm-6 col-sms-6 col-md-3'>			<article class="box">
+				<figure >
+					<a href="#" data-post_id="189" class="hover-effect popup-gallery"><img width="500" height="300" src="<?= Conectar::ruta_web() ?>script/images/extra/7-500x300.jpg" class="attachment-biggallery-thumb wp-post-image" alt="7" /></a>
+									</figure>
+				<div class="details">
+											<a title="View all" href="accommodation/hotel-colombina/index.html" class="pull-right button uppercase">select</a>
+						<h4 class="box-title"><a href="accommodation/hotel-colombina/index.html">Hotel Colombina</a></h4>
+													<label class="price-wrapper">
+								<span class="price-per-unit">$260.00</span>avg/night							</label>
+										</div>
+			</article>
+
+		</div><div class='col-sm-6 col-sms-6 col-md-3'>			<article class="box">
+				<figure >
+					<a href="#" data-post_id="209" class="hover-effect popup-gallery"><img width="500" height="300" src="<?= Conectar::ruta_web() ?>script/images/extra/6-500x300.jpg" class="attachment-biggallery-thumb wp-post-image" alt="6" /></a>
+									</figure>
+				<div class="details">
+											<a title="View all" href="accommodation/hilton-molino-stucky-venice/index.html" class="pull-right button uppercase">select</a>
+						<h4 class="box-title"><a href="accommodation/hilton-molino-stucky-venice/index.html">Hilton Molino Stucky</a></h4>
+													<label class="price-wrapper">
+								<span class="price-per-unit">$617.00</span>avg/night							</label>
+										</div>
+			</article>
+
+		</div></div></div></div></div></div></div></div><div class="parallax global-map-area" data-stellar-background-ratio="0.5"><div class="promo-box honeymoon"><div class="container"><div class="content-section description pull-right col-sm-6"><div class="table-wrapper hidden-table-sm"><div class="table-cell">
+	<div>
+			<h1 class="title">Popular Destinations for Honeymoon</h1>
+<p>Nunc cursus libero purusac congue arcu cursus utsed vitae pulvinar massa idporta neque purusac Etiam elerisque mi id faucibus iaculis vitae pulvinar.</p>
+
+	</div> <div class="image-box style9"><div class="vc_row wpb_row vc_inner row places"><div class="col-sms-4 wpb_column col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><div class="animated" data-animation-type="fadeInUp" data-animation-duration="2" data-animation-delay="0" ><figure class="middle-block"><a href="index3134.html?post_type=accommodation&amp;s=paris" title="" class="hover-effect yellow"><img src="<?= Conectar::ruta_web()?>script/images/extra/places01.jpg" alt="paris" width="306" height="170" class="middle-item" /></a></figure></div><div class="details">
+<h4 class="box-title">Paris<small>(990+ PLACES)</small></h4>
+<p><a class="button" title="" href="index3134.html?post_type=accommodation&amp;s=paris">SEE ALL</a></div></article></div></div></div><div class="col-sms-4 wpb_column col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><div class="animated" data-animation-type="fadeInUp" data-animation-duration="2" data-animation-delay="0.4" ><figure class="middle-block"><a href="index4550.html?post_type=accommodation&amp;s=greece" title="" class="hover-effect yellow"><img src="<?= Conectar::ruta_web()?>script/images/extra/places02.jpg" alt="greece" width="175" height="175" class="middle-item" /></a></figure></div><div class="details">
+<h4 class="box-title">Greece<small>(990+ PLACES)</small></h4>
+<p><a class="button" title="" href="index4550.html?post_type=accommodation&amp;s=greece">SEE ALL</a></div></article></div></div></div><div class="col-sms-4 wpb_column col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><div class="animated" data-animation-type="fadeInUp" data-animation-duration="2" data-animation-delay="0.8" ><figure class="middle-block"><a href="indexafba.html?post_type=accommodation&amp;s=australia" title="" class="hover-effect yellow"><img src="<?= Conectar::ruta_web()?>script/images/extra/places03.jpg" alt="australia" width="340" height="226" class="middle-item" /></a></figure></div><div class="details">
+<h4 class="box-title">Australia<small>(990+ PLACES)</small></h4>
+<p><a class="button" title="" href="indexafba.html?post_type=accommodation&amp;s=australia">SEE ALL</a></div></article></div></div></div></div></div></div></div></div><div class="image-container col-sm-6 "><img src="<?= Conectar::ruta_web()?>script/images/extra/couple.png" alt="couple" width="524" height="541" class="animated" data-animation-type="fadeInUp" data-animation-duration="2" data-animation-delay=""  /></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid offer vc_custom_1459450325173 inner-container"><div class="container"><div class="row"><div class="wpb_column col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div>
+			<h1 class="text-center">Did you know?</h1>
+<p class="col-xs-9 center-block no-float text-center" style="margin-bottom: 50px;">Mauris ullamcorper nibh quis leo ultrices in hendrerit velit tristiqueut augue in nulla lacinia bibendum liberoras rutrum ac purus ut tristique.<br />
+Nullam placerat lacinia dolor quis pretium. Phasellus vitae lacinia quam, at pellentesque lorem. Sed euismod turpis quis mattis fringilla.</p>
+
+	</div> </div></div></div></div></div></div><div class="image-box style2"><div class="vc_row wpb_row vc_inner vc_row-fluid offer vc_custom_1459450367450 inner-container"><div class="container"><div class="row"><div class="wpb_column col-sm-12 col-md-6"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/offers01.jpg" alt="imageframe-image" width="270" height="192" class="animated" data-animation-type="fadeInLeft" data-animation-duration="" data-animation-delay=""  /></a></figure><div class="details">
+<h4>Hire Cars</h4>
+<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
+<p><a class="button" title="" href="#">SEE ALL</a></div></article></div></div></div><div class="wpb_column col-sm-12 col-md-6"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/offers02.jpg" alt="imageframe-image" width="270" height="192" class="animated" data-animation-type="fadeInLeft" data-animation-duration="" data-animation-delay="0.4"  /></a></figure><div class="details">
+<h4>Cruise Deals</h4>
+<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
+<p><a class="button" title="" href="#">SEE ALL</a></div></article></div></div></div><div class="wpb_column col-sm-12 col-md-6"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/offers03.jpg" alt="imageframe-image" width="270" height="192" class="animated" data-animation-type="fadeInLeft" data-animation-duration="" data-animation-delay=""  /></a></figure><div class="details">
+<h4>Things To Do</h4>
+<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
+<p><a class="button" title="" href="#">SEE ALL</a></div></article></div></div></div><div class="wpb_column col-sm-12 col-md-6"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/offers04.jpg" alt="imageframe-image" width="270" height="192" class="animated" data-animation-type="fadeInLeft" data-animation-duration="" data-animation-delay="0.4"  /></a></figure><div class="details">
+<h4>Fly in Comfort</h4>
+<p>Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id.</p>
+<p><a class="button" title="" href="#">SEE ALL</a></div></article></div></div></div></div></div></div></div><div class="parallax section global-map-area" data-stellar-background-ratio="0.5"><div class="image-box style7"><div class="vc_row wpb_row vc_inner vc_row-fluid inner-container"><div class="container"><div class="row"><div class="col-sms-6 wpb_column col-sm-6 col-md-3"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure class="middle-block"><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/14.jpg" alt="imageframe-image" width="283" height="200" class="middle-item" /><span class="opacity-wrapper"></span></a></figure><div class="details">
+<h4><a href="#">Best Price Guarantee</a></h4>
+<p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.<br />
+</div></article></div></div></div><div class="col-sms-6 wpb_column col-sm-6 col-md-3"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure class="middle-block"><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/21.jpg" alt="imageframe-image" width="283" height="200" class="middle-item" /><span class="opacity-wrapper"></span></a></figure><div class="details">
+<h4><a href="#">Travel Insurance</a></h4>
+<p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.<br />
+</div></article></div></div></div><div class="col-sms-6 wpb_column col-sm-6 col-md-3"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure class="middle-block"><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/31.jpg" alt="imageframe-image" width="283" height="200" class="middle-item" /><span class="opacity-wrapper"></span></a></figure><div class="details">
+<h4><a href="#">Why Choose Us</a></h4>
+<p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.<br />
+</div></article></div></div></div><div class="col-sms-6 wpb_column col-sm-6 col-md-3"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><figure class="middle-block"><a href="#" title=""><img src="<?= Conectar::ruta_web() ?>script/images/extra/41.jpg" alt="imageframe-image" width="283" height="200" class="middle-item" /><span class="opacity-wrapper"></span></a></figure><div class="details">
+<h4><a href="#">Need Help?</a></h4>
+<p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.<br />
+</div></article></div></div></div></div></div></div></div></div>
+	</div> 
+</div>
+			</div>
+		</section>
+	
+    <footer id="footer" class="style-def">
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div id="trav-nav_menu-widget-2" class="small-box widget_nav_menu"><h2 class="widgettitle">Discover</h2><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="row"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12 col-xs-6"><a href="http://www.soaptheme.net/#">Safety</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 col-xs-6"><a href="http://www.soaptheme.net/#">About</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 col-xs-6"><a href="http://www.soaptheme.net/#">Travelo Picks</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 col-xs-6"><a href="http://www.soaptheme.net/#">Latest Job</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16 col-xs-6"><a href="http://www.soaptheme.net/#">Mobile</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17 col-xs-6"><a href="http://www.soaptheme.net/#">Press Release</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18 col-xs-6"><a href="http://www.soaptheme.net/#">Why Host</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19 col-xs-6"><a href="http://www.soaptheme.net/#">Blog Posts</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20 col-xs-6"><a href="http://www.soaptheme.net/#">Social Connect</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21 col-xs-6"><a href="http://www.soaptheme.net/#">Help Topics</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22 col-xs-6"><a href="http://www.soaptheme.net/#">Site Map</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23 col-xs-6"><a href="http://www.soaptheme.net/#">Policies</a></li>
+</ul></div></div>                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div id="news-widget-2" class="small-box travel-news"><h2 class="widgettitle">Travelo News</h2><ul class="travel-news"><li><div class="thumb"><a href="amazing-places/index.html" title="Amazing Places"><img width="64" height="64" src="<?= Conectar::ruta_web() ?>script/images/extra/17-64x64.png" class="attachment-widget-thumb wp-post-image" alt="1" /></a></div><div class="description"><h5 class="title"><a href="amazing-places/index.html" title="Amazing Places">Amazing Places</a></h5><p>Purus ac congue arcu cursus ut vitae pulvinar massaidp. Lorem</p><span class="date">November 11, 2014</span></div></li><li><div class="thumb"><a href="travel-insurance/index.html" title="Travel Insurance"><img width="64" height="64" src="<?= Conectar::ruta_web() ?>script/images/extra/23-64x64.png" class="attachment-widget-thumb wp-post-image" alt="2" /></a></div><div class="description"><h5 class="title"><a href="travel-insurance/index.html" title="Travel Insurance">Travel Insurance</a></h5><p>Purus ac congue arcu cursus ut vitae pulvinar massaidp. Lorem</p><span class="date"></span></div></li></ul></div>                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div id="mc4wp_form_widget-2" class="small-box widget_mc4wp_form_widget"><h2 class="widgettitle">Mailing List</h2><script type="text/javascript">(function() {
+	if (!window.mc4wp) {
+		window.mc4wp = {
+			listeners: [],
+			forms    : {
+				on: function (event, callback) {
+					window.mc4wp.listeners.push({
+						event   : event,
+						callback: callback
+					});
+				}
+			}
+		}
+	}
+})();
+</script><!-- MailChimp for WordPress v4.0.7 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-2276 mc4wp-form-basic" method="post" data-id="2276" data-name="Default sign-up form" ><div class="mc4wp-form-fields"><p>Sign up for our mailing list to get latest updates and offers.</p><br />
+<div class="with-icon full-width">
+<input type="email" id="mc4wp_email" name="EMAIL" class="input-text full-width" placeholder="your email" />
+<button type="submit" class="icon green-bg white-color"><i class="soap-icon-check"></i></button>
+</div>
+<p><br/><span>We respect your privacy</span></p>
+<div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></div><input type="hidden" name="_mc4wp_timestamp" value="1503351039" /><input type="hidden" name="_mc4wp_form_id" value="2276" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></div><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin --></div>                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div id="travcontactwidget-3" class="contact-box small-box widget_travcontactwidget"><h2 class="widgettitle">Need Travelo Help?</h2><p>We would be more than happy to help you. Our team advisor are 24/7 at your service to help you.</p><address class="contact-details"><span class="contact-phone"><i class="soap-icon-phone"></i> 1-800-123-HELLO</span><br /><a class="contact-email" href="mailto:hello@travelo.com">hello@travelo.com</a></address></div><div id="social_links-widget-3" class="small-box social_links">
+		<ul class="social-icons clearfix">
+		
+				<li class="twitter"><a title="twitter" href="https://www.twitter.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+		
+				<li class="googleplus"><a title="googleplus" href="https://plus.google.com/u/0/115751537592325261273/" target="_blank" data-toggle="tooltip"><i class="soap-icon-googleplus"></i></a></li>
+		
+				<li class="facebook"><a title="facebook" href="https://www.facebook.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+		
+				<li class="linkedin"><a title="linkedin" href="https://www.linkedin.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+		
+				<li class="youtube"><a title="youtube" href="https://www.youtube.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-youtube"></i></a></li>
+		
+				<li class="pinterest"><a title="pinterest" href="https://www.pinterest.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-pinterest"></i></a></li>
+		
+				<li class="vimeo"><a title="vimeo" href="https://www.vimeo.com/soaptheme" target="_blank" data-toggle="tooltip"><i class="soap-icon-vimeo"></i></a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+		</div>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom gray-area">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="http://www.soaptheme.net/wordpress/travelo">
+                        <img src="<?= Conectar::ruta_web()?>script/images/logo.png" alt="Travelo &#8211; Travel/Tour Booking WordPress Theme" />
+                    </a>
+                </div>
+                <div class="pull-right">
+                    <a id="back-to-top" href="#"><i class="soap-icon-longarrow-up circle"></i></a>
+                </div>
+                <div class="copyright pull-right">
+					<p>&copy; 2014 Travelo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="opacity-overlay opacity-ajax-overlay"><i class="fa fa-spinner fa-spin spinner"></i></div>
+<script type="text/javascript">(function() {function addEventListener(element,event,handler) {
+	if(element.addEventListener) {
+		element.addEventListener(event,handler, false);
+	} else if(element.attachEvent){
+		element.attachEvent('on'+event,handler);
+	}
+}function maybePrefixUrlField() {
+	if(this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if( urlFields && urlFields.length > 0 ) {
+	for( var j=0; j < urlFields.length; j++ ) {
+		addEventListener(urlFields[j],'blur',maybePrefixUrlField);
+	}
+}/* test if browser supports date fields */
+var testInput = document.createElement('input');
+testInput.setAttribute('type', 'date');
+if( testInput.type !== 'date') {
+
+	/* add placeholder & pattern to all date fields */
+	var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+	for(var i=0; i<dateFields.length; i++) {
+		if(!dateFields[i].placeholder) {
+			dateFields[i].placeholder = 'YYYY-MM-DD';
+		}
+		if(!dateFields[i].pattern) {
+			dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+		}
+	}
+}
+
+})();</script>			<script type='text/javascript' src='<?= Content::ruta_web() ?>script/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min0f0c.js?rev=4.6.5'></script>
+			<script type='text/javascript' src='<?= Content::ruta_web() ?>script/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min0f0c.js?rev=4.6.5'></script>
+						
+
+			<style scoped>.tp-caption.largewhitebg_button1,.largewhitebg_button1{background-color:rgba(0,0,0,0);color:#ffffff;font-size:14px;font-weight:400;line-height:33px;padding:0px 25px 0px 25px;text-decoration:none;text-shadow:none;cursor:pointer;border-width:1px;border-color:rgb(255,255,255);border-style:solid}.tp-caption.largewhitebg_button1:hover,.largewhitebg_button1:hover{background-color:rgb(255,255,255);color:rgb(1,183,242);font-size:14px;font-weight:400;line-height:33px;padding:0 25px;text-decoration:none;text-shadow:none;border-width:1px;border-color:rgb(255,255,255);border-style:solid}.tp-caption.large_bold_white_med_2,.large_bold_white_med_2{background-color:transparent;color:rgb(255,255,255);font-size:30px;font-weight:500;line-height:28px;text-decoration:none;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.large_bold_white_med,.large_bold_white_med{background-color:transparent;color:rgb(255,255,255);text-align:left;font-size:25px;font-weight:400;line-height:28px;text-decoration:none;border-width:0px;border-color:rgb(255,214,88);border-style:none}</style>
+
+			<script type="text/javascript">
+
+				/******************************************
+					-	PREPARE PLACEHOLDER FOR SLIDER	-
+				******************************************/
+				
+
+				var setREVStartSize = function() {
+					var	tpopt = new Object();
+						tpopt.startwidth = 1170;
+						tpopt.startheight = 646;
+						tpopt.container = jQuery('#rev_slider_6_1');
+						tpopt.fullScreen = "off";
+						tpopt.forceFullWidth="off";
+
+					tpopt.container.closest(".rev_slider_wrapper").css({height:tpopt.container.height()});tpopt.width=parseInt(tpopt.container.width(),0);tpopt.height=parseInt(tpopt.container.height(),0);tpopt.bw=tpopt.width/tpopt.startwidth;tpopt.bh=tpopt.height/tpopt.startheight;if(tpopt.bh>tpopt.bw)tpopt.bh=tpopt.bw;if(tpopt.bh<tpopt.bw)tpopt.bw=tpopt.bh;if(tpopt.bw<tpopt.bh)tpopt.bh=tpopt.bw;if(tpopt.bh>1){tpopt.bw=1;tpopt.bh=1}if(tpopt.bw>1){tpopt.bw=1;tpopt.bh=1}tpopt.height=Math.round(tpopt.startheight*(tpopt.width/tpopt.startwidth));if(tpopt.height>tpopt.startheight&&tpopt.autoHeight!="on")tpopt.height=tpopt.startheight;if(tpopt.fullScreen=="on"){tpopt.height=tpopt.bw*tpopt.startheight;var cow=tpopt.container.parent().width();var coh=jQuery(window).height();if(tpopt.fullScreenOffsetContainer!=undefined){try{var offcontainers=tpopt.fullScreenOffsetContainer.split(",");jQuery.each(offcontainers,function(e,t){coh=coh-jQuery(t).outerHeight(true);if(coh<tpopt.minFullScreenHeight)coh=tpopt.minFullScreenHeight})}catch(e){}}tpopt.container.parent().height(coh);tpopt.container.height(coh);tpopt.container.closest(".rev_slider_wrapper").height(coh);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);tpopt.container.css({height:"100%"});tpopt.height=coh;}else{tpopt.container.height(tpopt.height);tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);}
+				};
+
+				/* CALL PLACEHOLDER */
+				setREVStartSize();
+
+
+				var tpj=jQuery;
+				tpj.noConflict();
+				var revapi6;
+
+				tpj(document).ready(function() {
+
+				if(tpj('#rev_slider_6_1').revolution == undefined){
+					revslider_showDoubleJqueryError('#rev_slider_6_1');
+				}else{
+				   revapi6 = tpj('#rev_slider_6_1').show().revolution(
+					{	
+												dottedOverlay:"none",
+						delay:8000,
+						startwidth:1170,
+						startheight:646,
+						hideThumbs:200,
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:3,
+						
+												
+						simplifyAll:"off",
+
+						navigationType:"none",
+						navigationArrows:"solo",
+						navigationStyle:"round",
+
+						touchenabled:"on",
+						onHoverStop:"on",
+						nextSlideOnWindowFocus:"off",
+
+						swipe_threshold: 0.7,
+						swipe_min_touches: 1,
+						drag_block_vertical: false,
+						
+												
+												
+						keyboardNavigation:"off",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+
+						shadow:0,
+						fullWidth:"on",
+						fullScreen:"off",
+
+												spinner:"spinner0",
+												
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+						
+						
+						
+						hideThumbsOnMobile:"off",
+						hideNavDelayOnMobile:1500,
+						hideBulletsOnMobile:"off",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResolution:0,
+
+												hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0					});
+
+
+
+									}
+				});	/*ready*/
+
+			</script>
+
+
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/plugins/contact-form-7/jquery.form.mind03d.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/plugins/contact-form-7/scripts3a05.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/plugin9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery-ui.min9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/bootstrap.min6aec.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/components/jquery.bxslider/jquery.bxslider.min9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/components/flexslider/jquery.flexslider-min9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/jquery.validate.min9712.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajaxurl = "index.html\/\/www.soaptheme.net\/wordpress\/travelo\/wp-admin\/admin-ajax.php?lang=en";
+var themeurl = "index.html\/\/www.soaptheme.net\/wordpress\/travelo\/wp-content\/themes\/Travelo";
+var date_format = "mm\/dd\/yy";
+var settings = {"sticky_menu":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/theme-scripts9712.js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/gmap3.min6aec.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/js/comment-reply.min9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/plugins/sitepress-multilingual-cms/res/js/sitepress9712.js'></script>
+<script type='text/javascript' src='<?= Conectar::ruta_web()?>script/plugins/js_composer/assets/js/dist/js_composer_front.min5859.js'></script>
+
+<script type='text/javascript' src='w<?= Conectar::ruta_web()?>script/plugins/mailchimp-for-wp/assets/js/forms-api.min1678.js'></script>
+
+</body>
+</html>

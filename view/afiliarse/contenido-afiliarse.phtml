@@ -1,0 +1,149 @@
+<div class="container-fluid header-fondo">
+	<div class="container">
+		<div class="row section-header">
+			<div class="col-md-8 section-title">
+				<h2>Afiliarse</h2>
+			</div>
+			<div class="col-md-4 section-link">
+				<h4><a href="" title="">Inicio</a> <span>/</span> <a href="" class="active" title="">Afiliarse</a></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" id="contenido-afiliarse">
+	<form action="" method="post">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="title-afiliarse">Completa tus datos</h2>
+			</div>
+			<div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-user" aria-hidden="true"></i> Nombre(s)</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-user" aria-hidden="true"></i> Apellido paterno</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-user" aria-hidden="true"></i> Apellido materno</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-transgender" aria-hidden="true"></i> Sexo</label>
+	                <div class="selector">
+	                    <select class="full-width">
+	                        <option value="masculino">Masculino</option>
+	                        <option value="femenino">Femenino</option>
+	                    </select>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	        	<div class="form-group">
+	                <label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha nacimiento</label>
+	                <input type="date" class="input-text full-width" placeholder="mm/dd/yy">
+	          	</div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-phone" aria-hidden="true"></i> Confirmar teléfono</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Dirección</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Número exterior</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Número interior</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Código postal</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Colonia</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Delegación o municipio</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Ciudad</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-map-marker" aria-hidden="true"></i> Estado</label>
+	                <input type="text" class="input-text full-width" >
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="form-group">
+	                <label><i class="fa fa-suitcase" aria-hidden="true"></i> Motivo del viaje</label>
+	                <div class="selector">
+	                    <select class="full-width">
+	                        <option value="vacaciones">Vacaciones</option>
+	                        <option value="medico">Medico</option>
+	                        <option value="familiar">Familiar</option>
+	                        <option value="trabajo">Trabajo</option>
+	                    </select>
+	                </div>
+	            </div>
+	        </div>
+	        
+		</div>
+		<div class="row">
+			<div class="col-md-12 terminos-notificaciones">
+				<div class="form-group">
+					<input type="checkbox" name="terminos" value=""> <a href="<?= Conectar::ruta_web() ?>aviso-de-privacidad/" title="">Acepto términos y condiciones de servicio, pago y precio.</a>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" name="notificaciones" value=""> Acepto recibir notificaciones y correos electrónicos con promociones de AUS card.
+				</div>
+				<h3>Las políticas y términos de uso de la tarjeta las haremos llegar en un futuro.</h3>
+				
+	        	<button type="button" class="registrarse full-width animated" data-animation-type="bounce" data-animation-duration="1">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+  <div class="main">
+    <section>
+   	<img src="<?= Conectar::ruta_web() ?>script/img_autotransportes/PAQUETERIAAUS1.jpg" alt="">
+   	<div class="page_container">
+          <h1>One Page Scroll v1.3.1</h1>
+          <h2>Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin</h2>
+          <p class="credit">Created by <a href="http://www.thepetedesign.com">Pete R.</a>, Founder of <a href="http://www.Travelistly.com" target="_blank">Travelistly</a> &amp; <a href="http://www.bucketlistly.com" target="_blank">BucketListly</a></p>
+          <div class="btns">
+  	        <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Download on Github</a>
+  	        <p class="text-btn">Looking for a <a href="http://www.thepetedesign.com/demos/purejs_onepage_scroll_demo.html">Pure JS</a> | <a href="http://www.thepetedesign.com/demos/zepto_onepage_scroll_demo.html">Zepto</a> version?</p>
+  	      </div>
+  	    </div>
+    </section>
+    <section>
+    	<img src="<?= Conectar::ruta_web() ?>script/img_autotransportes/AUS%20EDECAN.jpg" alt="">
+    </section>
+    <section>
+    	<img src="<?= Conectar::ruta_web() ?>script/img_autotransportes/AUS%20EDECAN.jpg" alt="">
+    </section>
+  </div>
+    
+
+<script type="text/javascript">
+		
+jQuery("#page-wrapper .main").onepage_scroll({
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                    // the browser's width is less than 600, the fallback will kick in.
+   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
+</script>

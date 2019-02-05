@@ -1,0 +1,49 @@
+<div class="vc_row wpb_row vc_inner vc_row-fluid section destinations inner-container" id="promociones-inicio">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6" id="promocion-video">
+              <div id="reproductorSinAudio">
+              </div>
+            </div>
+            <div class="col-md-6" id="texto-promo-video">
+              <div class="texto-promo">
+                <h1 class="txt-uno">APROVECHA</h1>
+                <h1 class="txt-dos"><span>20%</span> descuento</h1>
+                <h1 class="txt-tres">Boleto redondo</h1>
+
+              </div>
+              <!-- <div class="img-promo">
+                <img src="<?= Conectar::ruta_web()?>script/img_autotransportes/fondo/sorprendida.png" alt="">
+              </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<script async src="https://www.youtube.com/iframe_api"></script>
+            <script>
+             function onYouTubeIframeAPIReady() {
+              var reproductor;
+              reproductor = new YT.Player('reproductorSinAudio', {
+                videoId: 'oujtxDHcnBM', 
+                width: 730,               
+                height: 370,             
+                playerVars: {
+                  autoplay: 1,       
+                  controls: 0,        
+                  showinfo: 0,        
+                  modestbranding: 0,
+                  loop: 0,            
+                  fs: 0,             
+                  cc_load_policty: 0, 
+                  iv_load_policy: 3,  
+                  autohide: 0         
+                },
+                events: {
+                  onReady: function(e) {
+                    e.target.mute();
+                  }
+                }
+              });
+             }
+ 
+        </script>

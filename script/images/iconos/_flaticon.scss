@@ -1,0 +1,137 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 28/08/2017 22:18
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-chofer-1:before { content: "\f100"; }
+.flaticon-chofer:before { content: "\f101"; }
+.flaticon-transfer:before { content: "\f102"; }
+.flaticon-flechas:before { content: "\f103"; }
+.flaticon-paypal:before { content: "\f104"; }
+.flaticon-american-express:before { content: "\f105"; }
+.flaticon-mastercard:before { content: "\f106"; }
+.flaticon-visa:before { content: "\f107"; }
+.flaticon-logo-visa:before { content: "\f108"; }
+.flaticon-cafeteria:before { content: "\f109"; }
+.flaticon-taza-cafe:before { content: "\f10a"; }
+.flaticon-conexion:before { content: "\f10b"; }
+.flaticon-enchufe:before { content: "\f10c"; }
+.flaticon-juego:before { content: "\f10d"; }
+.flaticon-sanitarios:before { content: "\f10e"; }
+.flaticon-pantalla:before { content: "\f10f"; }
+.flaticon-pelicula:before { content: "\f110"; }
+.flaticon-pelicula-autobus:before { content: "\f111"; }
+.flaticon-musica:before { content: "\f112"; }
+.flaticon-retrete:before { content: "\f113"; }
+.flaticon-asiento:before { content: "\f114"; }
+.flaticon-asiento-autobus:before { content: "\f115"; }
+.flaticon-asiento-camion:before { content: "\f116"; }
+.flaticon-wifi:before { content: "\f117"; }
+.flaticon-seguridad:before { content: "\f118"; }
+.flaticon-domicilio:before { content: "\f119"; }
+.flaticon-venta:before { content: "\f11a"; }
+.flaticon-punto-de-venta:before { content: "\f11b"; }
+.flaticon-venta-boletos:before { content: "\f11c"; }
+.flaticon-taquilla:before { content: "\f11d"; }
+.flaticon-negocio:before { content: "\f11e"; }
+.flaticon-calendario:before { content: "\f11f"; }
+.flaticon-calendario-tiempo:before { content: "\f120"; }
+.flaticon-central:before { content: "\f121"; }
+.flaticon-autobus:before { content: "\f122"; }
+.flaticon-dinero:before { content: "\f123"; }
+.flaticon-pago:before { content: "\f124"; }
+.flaticon-paqueteria:before { content: "\f125"; }
+.flaticon-operador:before { content: "\f126"; }
+.flaticon-reloj:before { content: "\f127"; }
+.flaticon-correo:before { content: "\f128"; }
+.flaticon-promociones:before { content: "\f129"; }
+.flaticon-maleta:before { content: "\f12a"; }
+.flaticon-servicios:before { content: "\f12b"; }
+.flaticon-casa:before { content: "\f12c"; }
+.flaticon-ubicacion:before { content: "\f12d"; }
+.flaticon-telefono:before { content: "\f12e"; }
+.flaticon-boleto:before { content: "\f12f"; }
+.flaticon-factura:before { content: "\f130"; }
+    
+    $font-Flaticon-chofer-1: "\f100";
+    $font-Flaticon-chofer: "\f101";
+    $font-Flaticon-transfer: "\f102";
+    $font-Flaticon-flechas: "\f103";
+    $font-Flaticon-paypal: "\f104";
+    $font-Flaticon-american-express: "\f105";
+    $font-Flaticon-mastercard: "\f106";
+    $font-Flaticon-visa: "\f107";
+    $font-Flaticon-logo-visa: "\f108";
+    $font-Flaticon-cafeteria: "\f109";
+    $font-Flaticon-taza-cafe: "\f10a";
+    $font-Flaticon-conexion: "\f10b";
+    $font-Flaticon-enchufe: "\f10c";
+    $font-Flaticon-juego: "\f10d";
+    $font-Flaticon-sanitarios: "\f10e";
+    $font-Flaticon-pantalla: "\f10f";
+    $font-Flaticon-pelicula: "\f110";
+    $font-Flaticon-pelicula-autobus: "\f111";
+    $font-Flaticon-musica: "\f112";
+    $font-Flaticon-retrete: "\f113";
+    $font-Flaticon-asiento: "\f114";
+    $font-Flaticon-asiento-autobus: "\f115";
+    $font-Flaticon-asiento-camion: "\f116";
+    $font-Flaticon-wifi: "\f117";
+    $font-Flaticon-seguridad: "\f118";
+    $font-Flaticon-domicilio: "\f119";
+    $font-Flaticon-venta: "\f11a";
+    $font-Flaticon-punto-de-venta: "\f11b";
+    $font-Flaticon-venta-boletos: "\f11c";
+    $font-Flaticon-taquilla: "\f11d";
+    $font-Flaticon-negocio: "\f11e";
+    $font-Flaticon-calendario: "\f11f";
+    $font-Flaticon-calendario-tiempo: "\f120";
+    $font-Flaticon-central: "\f121";
+    $font-Flaticon-autobus: "\f122";
+    $font-Flaticon-dinero: "\f123";
+    $font-Flaticon-pago: "\f124";
+    $font-Flaticon-paqueteria: "\f125";
+    $font-Flaticon-operador: "\f126";
+    $font-Flaticon-reloj: "\f127";
+    $font-Flaticon-correo: "\f128";
+    $font-Flaticon-promociones: "\f129";
+    $font-Flaticon-maleta: "\f12a";
+    $font-Flaticon-servicios: "\f12b";
+    $font-Flaticon-casa: "\f12c";
+    $font-Flaticon-ubicacion: "\f12d";
+    $font-Flaticon-telefono: "\f12e";
+    $font-Flaticon-boleto: "\f12f";
+    $font-Flaticon-factura: "\f130";

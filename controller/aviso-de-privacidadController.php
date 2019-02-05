@@ -1,0 +1,1 @@
+<?php require_once("view/aviso-de-privacidad/index.phtml"); ?>

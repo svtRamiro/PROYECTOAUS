@@ -1,0 +1,24 @@
+ <div id="travelo-login" class="travelo-modal-box travelo-box">
+    <div>
+        <a href="#" class="logo-modal">Travelo &#8211; Travel/Tour Booking WordPress Theme<img src="<?= Conectar::ruta_web()?>script/images/logo.png" alt="Travelo &#8211; Travel/Tour Booking WordPress Theme"></a>
+    </div>
+    <form name="loginform" action="http://www.soaptheme.net/wordpress/travelo/wp-login.php" method="post">
+        <div class="form-group">
+            <input type="text" name="log" tabindex="1" class="input-text full-width" placeholder="user name">
+        </div>
+        <div class="form-group">
+            <input type="password" name="pwd" tabindex="2" class="input-text full-width" placeholder="password">
+        </div>
+        <div class="form-group">
+            <a href="wp-loginc2b6.html?action=lostpassword" class="forgot-password pull-right">Forgot password?</a>
+            <div class="checkbox checkbox-inline">
+                <label>
+                    <input type="checkbox" name="rememberme" tabindex="3" value="forever"> Remember me </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button tabindex="4" class="button btn-medium btn-login full-width">LOG IN</button>
+        </div>
+        <input type="hidden" name="redirect_to" value="http://www.soaptheme.net/wordpress/travelo">
+    </form>
+</div>

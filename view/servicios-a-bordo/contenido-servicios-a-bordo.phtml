@@ -1,0 +1,143 @@
+<div class="" id="general-servicios-a-bordo" >
+  <div class="menu-fixed" id="menu">
+    <ul>
+      <li><a href="<?= Conectar::ruta_web() ?>servicios-a-bordo/#descripcion-servicios-a-bordo" class="menu-item menu-item-type-post_type menu-item-object-travel_guide" title=""><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="<?= Conectar::ruta_web() ?>servicios-a-bordo/#seguridad" title=""><i class="fa fa-shield"></i>   Seguridad</a></li>
+      <li><a href="<?= Conectar::ruta_web() ?>servicios-a-bordo/#comodidad" title=""><i class="fa fa-check-circle"></i>   Comodidad</a></li>
+      <li><a href="<?= Conectar::ruta_web() ?>servicios-a-bordo/#tecnologia" title=""><i class="fa fa-cog"></i>   Tecnología</a></li>
+      <li><a href="<?= Conectar::ruta_web() ?>servicios-a-bordo/#galerias-servicios" title=""><i class="fa fa-camera"></i>  Galería</a></li>
+    </ul>
+  </div>
+  <div class="col-md-12 " id="descripcion-servicios-a-bordo" > 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="img-descripcion-servicios">
+          <img src="<?= Conectar::ruta_web() ?>script/images/serviciosabordo/img-inicio.jpg" alt="">
+        </div>
+        <div class="col-md-6" id="texto-descripcion-servicios">
+          <h2>Volvo expreso</h2>
+          <p>
+            En unidos de Sinaloa tenemos los autobuses más modernos y con tecnología de punta sistemas de entretenimiento y de seguridad que hacen de su trayecto toda una experiencia placentera, lo invitamos a ponerse cómodo y disfrutar de su viaje.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 seccion-servicios" id="seguridad" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="texto-descripcion-servicios">
+          <h2>Seguridad</h2>
+          <p>Autobuses equipados con sistemas de seguridad activa como frenos ABS y velocidad controlada máxima a 95km/h.</p>
+        </div>
+        <div class="col-md-6" id="img-descripcion-servicios">
+          <img src="<?= Conectar::ruta_web() ?>script/images/serviciosabordo/seguridad.jpg" alt="">
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="col-md-12 seccion-servicios" id="comodidad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="img-descripcion-servicios">
+          <img src="<?= Conectar::ruta_web() ?>script/images/serviciosabordo/comodidad.jpg" alt="">
+        </div>
+        <div class="col-md-6" id="texto-descripcion-servicios">
+          <h2>Comodidad</h2>
+          <p>
+            Unidades con suspensión de aire y asientos cómodos reclinables y con espacio suficiente para disfrutar cómodamente del viaje.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 seccion-servicios" id="tecnologia">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="texto-descripcion-servicios">
+          <h2>Tecnología</h2>
+          <p>Conexión eléctrica, sistema de entrenamiento con mega pantallas HD y *conexión a internet de alta velocidad es parte del moderno equipamiento de nuestras unidades.</br>
+          <span>*La calidad del servicio depende del proveedor del servicio y de las condiciones del camino.</span></p>
+        </div>
+        <div class="col-md-6" id="img-descripcion-servicios">
+          <img src="<?= Conectar::ruta_web() ?>script/images/serviciosabordo/tecnologia.jpg" alt="">
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="col-md-12 seccion-servicios" id="galerias-servicios">
+    <div class="container">
+      <div class="row">
+         <div class="col-md-offset-6 col-md-6 " id="">
+          <h2>Galería</h2>
+        </div>
+        <div class="col-md-12" id="img-descripcion-servicios">
+           <div class="container">
+             <div class="main-wrapper scrollspy-container">
+            <br>
+            <div class="container-outer">
+                <div class="container">
+                    <main id="content">
+                        <section id="ta-portfolio" class="text-center">
+                            <div class="container">
+                                <div class="row filtr-container">
+                                    <?php
+                                    function showFiles($path){
+                                        $dir = opendir($path);
+                                        $files = array();
+                                        while ($current = readdir($dir)){
+                                            if( $current != "." && $current != "..") {
+                                                if(is_dir($path.$current)) {
+                                                    showFiles($path.$current.'/');
+                                                }
+                                                else {
+                                                    $files[] = $current;
+                                                }
+                                            }
+                                        }
+                                        for($i=0; $i<count( $files ); $i++){
+                                            ?>
+                                            <div class="col-sm-3 col-md-3 filtr-item" data-category="1, 3, 5">
+                                                <div class="ta-portfolio-box zoomIn animated">
+                                                    <figure>
+                                                        <a href="#"> <img alt="portfolio1" class="img-responsive" src="http://miweb93.com/preview/autotransportes2/<?= $path ?>/<?= $files[$i] ?>"> </a>
+                                                        <div class="overlay"> <a class="btn portfolio-view" href="http://miweb93.com/preview/autotransportes2/<?= $path ?>/<?= $files[$i] ?>"><i class="fa fa-plus"></i></a></div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            if (!empty($i) AND ($i+1)%4 == 0) {
+                                                ?>
+                                                <div class="clearfix"></div>
+                                                <?php
+                                            }
+                                        }
+                                    }
+                                    showFiles("script/images/serviciosabordo/galeria/");
+                                    ?>
+                                    
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+<script>
+  jQuery(window).bind('scroll', function () {
+      if (jQuery(window).scrollTop() > 50) {
+          jQuery('#menu').addClass('fixed');
+      } else {
+          jQuery('#menu').removeClass('fixed');
+      }
+  });
+</script>
+   
+
+
